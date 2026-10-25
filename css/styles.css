@@ -1621,7 +1621,7 @@ ul {
 .project-carousel .carousel-btn:first-child { left: 0.15rem; }
 #project-next { right: 0.15rem; }
 
-.org-scroll { overflow-x: auto; padding: 1.2rem 0 0.4rem; }
+.org-scroll { overflow-x: auto; padding: 1.7rem 0 0.4rem; }
 
 .org-board {
   min-width: 1100px;
