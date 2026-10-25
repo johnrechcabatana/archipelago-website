@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Archipelago Builders Corporation | Beyond Legacy</title>
   <meta name="description" content="Archipelago Builders Corporation is a Category AAA general contractor in Quezon City. Engineers and contractors since the 1960s — road, commercial, industrial, institutional, and high-rise construction." />
   <link rel="icon" href="images/headerlogo.jpg" />
@@ -179,33 +179,68 @@
         <div class="section-head">
           <p class="eyebrow">What we build</p>
           <h2>General contractor, AAA</h2>
-          <p class="section-lead">Open a service to read the scope, then jump into the project record.</p>
+          <p class="section-lead">Flip a card to read the scope. The matching projects open below.</p>
         </div>
         <div class="service-list" id="service-list">
-          <button class="service-card is-open" type="button" data-service="Road" aria-expanded="true">
-            <span class="num">01</span>
-            <h3>Road projects</h3>
-            <p>Horizontal civil works that connect communities and carry commerce, delivered with the same AAA discipline as vertical building.</p>
+          <button class="service-card" type="button" data-service="Road" aria-expanded="false">
+            <span class="flip-inner">
+              <span class="flip-face flip-front">
+                <span class="num">01</span>
+                <h3>Road projects</h3>
+                <span class="flip-hint">Flip card</span>
+              </span>
+              <span class="flip-face flip-back">
+                <p>Horizontal civil works that connect communities and carry commerce, delivered with the same AAA discipline as vertical building.</p>
+              </span>
+            </span>
           </button>
           <button class="service-card" type="button" data-service="Commercial" aria-expanded="false">
-            <span class="num">02</span>
-            <h3>Commercial</h3>
-            <p>Stores, hotels, markets, and business buildings — from Makro and Garden Orchid Hotel to plazas across Luzon and the Visayas.</p>
+            <span class="flip-inner">
+              <span class="flip-face flip-front">
+                <span class="num">02</span>
+                <h3>Commercial</h3>
+                <span class="flip-hint">Flip card</span>
+              </span>
+              <span class="flip-face flip-back">
+                <p>Stores, hotels, markets, and business buildings — from Makro and Garden Orchid Hotel to plazas across Luzon and the Visayas.</p>
+              </span>
+            </span>
           </button>
           <button class="service-card" type="button" data-service="Industrial" aria-expanded="false">
-            <span class="num">03</span>
-            <h3>Industrial</h3>
-            <p>Pharmaceutical plants, distribution centers, and manufacturing facilities, including the EK South food plant at Carmelray.</p>
+            <span class="flip-inner">
+              <span class="flip-face flip-front">
+                <span class="num">03</span>
+                <h3>Industrial</h3>
+                <span class="flip-hint">Flip card</span>
+              </span>
+              <span class="flip-face flip-back">
+                <p>Pharmaceutical plants, distribution centers, and manufacturing facilities, including the EK South food plant at Carmelray.</p>
+              </span>
+            </span>
           </button>
           <button class="service-card" type="button" data-service="Institutional" aria-expanded="false">
-            <span class="num">04</span>
-            <h3>Institutional</h3>
-            <p>Campuses, chapels, and civic buildings — Ateneo schools, St. Peter chapels, and the Modern Pasig City Hall.</p>
+            <span class="flip-inner">
+              <span class="flip-face flip-front">
+                <span class="num">04</span>
+                <h3>Institutional</h3>
+                <span class="flip-hint">Flip card</span>
+              </span>
+              <span class="flip-face flip-back">
+                <p>Campuses, chapels, and civic buildings — Ateneo schools, St. Peter chapels, and the Modern Pasig City Hall.</p>
+              </span>
+            </span>
           </button>
           <button class="service-card" type="button" data-service="High-Rise" aria-expanded="false">
-            <span class="num">05</span>
-            <h3>High-rise</h3>
-            <p>Towers for SMDC, Filinvest, Vista Land, Megaworld, and other developers, including takeover work brought to completion.</p>
+            <span class="flip-inner">
+              <span class="flip-face flip-front">
+                <span class="num">05</span>
+                <h3>High-rise</h3>
+                <span class="flip-hint">Flip card</span>
+              </span>
+              <span class="flip-face flip-back">
+                <p>Towers for SMDC, Filinvest, Vista Land, Megaworld, and other developers, including takeover work brought to completion.</p>
+              </span>
+            </span>
           </button>
         </div>
       </div>
@@ -241,7 +276,11 @@
             </label>
           </div>
         </div>
-        <div class="project-grid" id="project-grid"></div>
+        <div class="project-carousel">
+          <button class="carousel-btn" type="button" id="project-prev" aria-label="Previous projects">‹</button>
+          <div class="project-grid" id="project-grid" tabindex="0" aria-label="Project cards"></div>
+          <button class="carousel-btn" type="button" id="project-next" aria-label="Next projects">›</button>
+        </div>
         <p class="empty" id="project-empty" hidden>No projects match that search. Try another city, developer, or category.</p>
       </div>
     </section>
@@ -285,11 +324,11 @@
           <h2>What ABC brings to site</h2>
         </div>
         <div class="cap-tabs" role="tablist" aria-label="Capabilities">
-          <button type="button" class="is-active" data-cap="equipment" role="tab" aria-selected="true">Equipment</button>
-          <button type="button" data-cap="formworks" role="tab" aria-selected="false">Aluminum formworks</button>
-          <button type="button" data-cap="archiwall" role="tab" aria-selected="false">Archiwall</button>
-          <button type="button" data-cap="archicast" role="tab" aria-selected="false">Archicast</button>
-          <button type="button" data-cap="quality" role="tab" aria-selected="false">Quality &amp; PCAB</button>
+          <button type="button" class="is-active" data-cap="equipment" role="tab" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M7 18V8h4v10M13 18V5h4v13"/></svg><span>Equipment</span></button>
+          <button type="button" data-cap="formworks" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>Aluminum formworks</span></button>
+          <button type="button" data-cap="archiwall" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M4 12h16M12 8v12"/></svg><span>Archiwall</span></button>
+          <button type="button" data-cap="archicast" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V10l6-4 6 4v10M10 20v-5h4v5"/></svg><span>Archicast</span></button>
+          <button type="button" data-cap="quality" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Quality &amp; PCAB</span></button>
         </div>
 
         <div class="cap-panel is-active" data-cap="equipment">
@@ -369,7 +408,7 @@
               <p>PCAB Regular Contractor’s License No. 33942. Category AAA for General Building and General Engineering. Authorized Managing Officer: Engr. John Paul Pe. Validity: 4 September 2025 to 4 September 2027.</p>
               <button class="btn btn-navy license-btn zoomable" type="button" data-full="images/deck/pcab-license.png" data-alt="PCAB Regular Contractor’s License of Archipelago Builders Corporation">View the PCAB license</button>
             </div>
-            <div class="cap-photos">
+            <div class="cap-photos cap-photos-portrait">
               <button type="button" class="zoomable" data-full="images/deck/pcab-license.png" data-alt="PCAB license certificate">
                 <img src="images/deck/pcab-license.png" alt="PCAB Regular Contractor’s License" />
               </button>
@@ -382,20 +421,12 @@
     <section class="section" id="organization">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Our team</p>
+          <span class="gold-bar" aria-hidden="true"></span>
           <h2>Organization chart</h2>
-          <p class="section-lead">The chart below is the organization chart from the company profile. Choose a leader to see the departments that report through them, or open the chart to zoom and pan.</p>
+          <p class="section-lead">Select a leader on the chart to open the departments that report through them. Select again to close.</p>
         </div>
-        <div class="org-layout">
-          <div class="leader-list" id="leader-list" role="tablist" aria-label="Leaders"></div>
-          <article class="leader-detail info-card" id="leader-detail" aria-live="polite"></article>
-        </div>
-        <figure class="org-figure">
-          <button type="button" class="zoomable" data-full="images/deck/org-chart.jpg" data-alt="Organization chart of Archipelago Builders Corporation">
-            <img src="images/deck/org-chart.jpg" alt="Organization chart showing Engr. John Paul Pe, President and CEO, and the leadership team" />
-          </button>
-          <figcaption>Organization chart from the company profile. Select the image to zoom. Drag the image when it is enlarged.</figcaption>
-        </figure>
+        <div class="org-scroll" id="org-chart"></div>
+        <div class="org-panel" id="org-panel" hidden></div>
       </div>
     </section>
 
@@ -431,41 +462,59 @@
     <section class="section connect" id="connect">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Connect with us</p>
+          <span class="gold-bar" aria-hidden="true"></span>
           <h2>YouTube and Facebook</h2>
-          <p class="section-lead">Watch the company channel and follow the Facebook page. The addresses below are the official links.</p>
+          <p class="section-lead">Watch the company channel and follow the Facebook page. These are the official links.</p>
         </div>
         <div class="connect-grid">
           <article class="connect-card">
-            <h3>YouTube</h3>
-            <p>Archipelago Builders Corporation channel — galas, workforce events, and company films.</p>
+            <div class="social-head">
+              <span class="social-mark yt" aria-hidden="true">▶</span>
+              <div>
+                <h3>YouTube</h3>
+                <p>Galas, workforce events and company films.</p>
+              </div>
+            </div>
             <div class="url-line">
               <a id="youtube-url" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@archipelagobuilderscorpora5317</a>
               <button class="copy-btn" type="button" data-copy="https://www.youtube.com/@archipelagobuilderscorpora5317">Copy</button>
             </div>
-            <div class="video-shell">
-              <iframe id="yt-frame" title="Archipelago Builders Corporation on YouTube" src="https://www.youtube-nocookie.com/embed/lRWIdAVJXkc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a class="thumb-link" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer" aria-label="Open the Archipelago Builders YouTube channel">
+              <img src="https://i.ytimg.com/vi/lRWIdAVJXkc/hqdefault.jpg" alt="" />
+              <span class="play-badge" aria-hidden="true">▶</span>
+            </a>
+            <div class="video-list">
+              <a class="video-row is-featured" href="https://www.youtube.com/watch?v=lRWIdAVJXkc" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Gala — A Night to Remember <em>Featured</em></a>
+              <a class="video-row" href="https://www.youtube.com/watch?v=FbkxUe66Liw" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Workforce Appreciation Month, May 2025</a>
+              <a class="video-row" href="https://www.youtube.com/watch?v=OfLrph5KtCo" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Christmas Party 2023 highlights</a>
             </div>
-            <div class="video-list" id="video-list" role="tablist" aria-label="Channel videos"></div>
+            <a class="btn btn-line connect-open" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">Open YouTube</a>
           </article>
           <article class="connect-card">
-            <h3>Facebook</h3>
-            <p>News and updates from Archipelago Builders Corporation.</p>
+            <div class="social-head">
+              <span class="social-mark fb" aria-hidden="true">f</span>
+              <div>
+                <h3>Facebook</h3>
+                <p>News and updates from Archipelago Builders Corporation.</p>
+              </div>
+            </div>
             <div class="url-line">
               <a id="facebook-url" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">https://www.facebook.com/profile.php?id=100086010290289</a>
               <button class="copy-btn" type="button" data-copy="https://www.facebook.com/profile.php?id=100086010290289">Copy</button>
             </div>
-            <div class="fb-frame">
-              <iframe
-                title="Archipelago Builders Corporation on Facebook"
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100086010290289&tabs=timeline&width=500&height=480&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-                loading="lazy"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <div class="fb-preview">
+              <div class="fb-preview-top">
+                <img src="images/headerlogo.jpg" alt="" />
+                <div>
+                  <strong>Archipelago Builders Corporation</strong>
+                  <span>Facebook page</span>
+                </div>
+              </div>
+              <p class="fb-count">3,056 <small>followers</small></p>
+              <p>Follow the page for company news, project milestones and updates.</p>
+              <a class="fb-follow" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Follow on Facebook</a>
             </div>
-            <div class="btn-row">
-              <a class="btn btn-gold" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Open Facebook</a>
-              <a class="btn btn-ghost" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">Open YouTube</a>
-            </div>
+            <a class="btn btn-line connect-open" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Open Facebook</a>
           </article>
         </div>
       </div>
@@ -517,19 +566,25 @@
             </div>
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="3" required></textarea>
               <span class="error" id="message-error"></span>
             </div>
             <button class="btn btn-navy" type="submit">Send message</button>
             <p class="form-note" id="form-note" hidden>Your email app will open with this message addressed to abcorpinfo@archipelagobuilders.com.</p>
           </form>
         </div>
-        <div class="map-head">
-          <h3>Main office</h3>
-          <a href="https://www.google.com/maps/search/?api=1&query=Archipelago+Building+29+North+Avenue+Bagong+Pag-asa+Quezon+City" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-        </div>
-        <div class="map-frame">
-          <iframe title="Map of Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City" src="https://maps.google.com/maps?q=Archipelago%20Building%2C%2029%20North%20Avenue%2C%20Bagong%20Pag-asa%2C%20Quezon%20City&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-wrap">
+          <div class="map-frame">
+            <iframe title="Map of Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City" src="https://maps.google.com/maps?q=Archipelago%20Building%2C%2029%20North%20Avenue%2C%20Bagong%20Pag-asa%2C%20Quezon%20City&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <aside class="map-card">
+            <p class="eyebrow">Main office</p>
+            <h3>Archipelago Builders Corporation</h3>
+            <p>Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City</p>
+            <p><a href="tel:+63289269056">(02) 8926-9056 to 58</a><br />
+            <a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Archipelago+Building+29+North+Avenue+Bagong+Pag-asa+Quezon+City" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </aside>
         </div>
       </div>
     </section>
@@ -539,25 +594,38 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="images/deck/logo-lockup.jpeg" alt="" />
+          <img src="images/headerlogo.jpg" alt="" />
           <strong>Archipelago Builders Corporation</strong>
         </div>
         <p>Engineers | Contractors. General Contractor — AAA. Beyond Legacy.</p>
       </div>
       <div>
         <h3>Visit</h3>
-        <p>Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City<br />
-        <a href="tel:+63289269056">(02) 8926-9056 to 58</a><br />
-        <a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
+        <p>Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City</p>
+        <p><a href="tel:+63289269056">(02) 8926-9056 to 58</a></p>
+        <p><a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#organization">Organization</a></li>
+        </ul>
       </div>
       <div>
         <h3>Follow</h3>
-        <p><a href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">YouTube channel</a><br />
-        <a href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Facebook page</a></p>
+        <ul class="footer-links">
+          <li><a href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">YouTube channel</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Facebook page</a></li>
+        </ul>
       </div>
     </div>
     <div class="container legal">
       <p>&copy; <span id="year"></span> Archipelago Builders Corporation. All rights reserved.</p>
+      <p>PCAB Category AAA</p>
     </div>
   </footer>
 

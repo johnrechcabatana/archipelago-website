@@ -1,17 +1,17 @@
 const PROJECTS = [
   { id: "gold-phase-2", name: "Gold Residences – Phase 2", status: "ongoing", category: "High-Rise", place: "Ninoy Aquino Avenue, Parañaque City", developer: "SM Development Corporation", amount: "₱1,065,000,000.00", scope: "Civil, structural, and masonry works", poc: 99.71, image: "images/deck/gold-residences.jpg", blurb: "Phase 2 residential towers along Ninoy Aquino Avenue." },
   { id: "gold-tower-e", name: "Gold Phase 2 – Tower E", status: "ongoing", category: "High-Rise", place: "Ninoy Aquino Avenue, Parañaque City", developer: "SM Development Corporation", amount: "₱448,000,000.00", scope: "Tower E. Tower D architectural works were awarded in September 2025.", poc: 77.66, image: "images/projects/gold-tower-e.jpg", blurb: "Tower E of Gold Residences Phase 2." },
-  { id: "bloom", name: "Bloom Residences", status: "ongoing", category: "High-Rise", place: "Dr. A. Santos Avenue, Brgy. San Antonio, Sucat, Parañaque", developer: "SM Development Corporation", amount: "₱860,000,000.00", scope: "Take-over works", poc: 41.91, takeover: true, image: "images/projects/bloom.jpg", blurb: "Take-over of Bloom Residences in Sucat." },
+  { id: "bloom", name: "Bloom Residences", status: "ongoing", category: "High-Rise", place: "Dr. A. Santos Avenue, Brgy. San Antonio, Sucat, Parañaque", developer: "SM Development Corporation", amount: "₱860,000,000.00", scope: "Take-over works", poc: 41.91, takeover: true, image: "images/projects/bloom-hi.jpg", blurb: "Take-over of Bloom Residences in Sucat." },
   { id: "charm", name: "Charm Residences", status: "ongoing", category: "High-Rise", place: "Felix Avenue, Cainta, Rizal", developer: "SM Development Corporation", amount: "₱543,949,990.00", scope: "Take-over works", poc: 94.51, takeover: true, image: "images/projects/charm.jpg", blurb: "Take-over of Charm Residences in Cainta." },
-  { id: "central-park", name: "9 Central Park", status: "ongoing", category: "High-Rise", place: "Northwin Global City, Brgy. Patubig, Marilao, Bulacan", developer: "Megaworld – NGC", amount: "₱950,000,000.00", poc: 79.8, image: "images/projects/central-park.jpg", blurb: "Residential development inside Northwin Global City." },
-  { id: "westwind", name: "Westwind Residences", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱950,000,000.00", scope: "4-storey condominium", poc: 99.81, image: "images/deck/westwind.jpeg", blurb: "Four-storey condominium cluster at Lancaster New City." },
+  { id: "central-park", name: "9 Central Park", status: "ongoing", category: "High-Rise", place: "Northwin Global City, Brgy. Patubig, Marilao, Bulacan", developer: "Megaworld – NGC", amount: "₱950,000,000.00", poc: 79.8, image: "images/projects/central-park-hi.jpg", blurb: "Residential development inside Northwin Global City." },
+  { id: "westwind", name: "Westwind Residences", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱950,000,000.00", scope: "4-storey condominium", poc: 99.81, image: "images/deck/westwind-hi.jpg", blurb: "Four-storey condominium cluster at Lancaster New City." },
   { id: "westwind-2", name: "Westwind Residences – Building 2, Cluster A", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱171,266,614.36", scope: "4-storey condominium", poc: 15.7, image: "images/projects/westwind-2.jpg", blurb: "Second building in Cluster A of Westwind Residences." },
   { id: "stpeter-muntinlupa", name: "St. Peter – Muntinlupa", status: "ongoing", category: "Institutional", place: "Brgy. Bayanan, Muntinlupa", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱390,000,000.00", scope: "4-storey chapel with 2-level basement parking", poc: 77.8, image: "images/deck/stpeter-muntinlupa.jpeg", blurb: "Chapel building with basement parking in Muntinlupa." },
-  { id: "stpeter-caloocan", name: "St. Peter – Caloocan", status: "ongoing", category: "Institutional", place: "Barangay 22, Caloocan City", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱917,000,000.00", scope: "9-storey memorial chapels with embalming facilities", poc: null, pocLabel: "Newly awarded", image: "images/deck/stpeter-caloocan.jpeg", blurb: "Newly awarded memorial chapel complex in Caloocan." },
+  { id: "stpeter-caloocan", name: "St. Peter – Caloocan", status: "ongoing", category: "Institutional", place: "Barangay 22, Caloocan City", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱917,000,000.00", scope: "9-storey memorial chapels with embalming facilities", poc: null, pocLabel: "Newly awarded", image: "images/deck/stpeter-caloocan-hi.jpg", blurb: "Newly awarded memorial chapel complex in Caloocan." },
   { id: "sunnyhomes", name: "Sunnyhomes Subdivision", status: "ongoing", category: "Housing", place: "Brgy. Banay-Banay, Padre Garcia, Batangas", developer: "Summerhills Home Development Corp.", amount: "₱117,129,600.00", scope: "Low-cost housing", poc: 67.22, image: "images/projects/sunnyhomes.jpg", blurb: "Low-cost housing in Padre Garcia, Batangas." },
   { id: "pasig-hall", name: "The Modern Pasig City Hall", status: "ongoing", category: "Institutional", place: "Caruncho Avenue, Brgy. San Nicolas, Pasig City", developer: "PCHCC", amount: "₱930,000,000.00", scope: "Concreting and rebars", poc: 44.53, image: "images/deck/pasig-cityhall.jpeg", blurb: "Structural concrete and rebar works for the new city hall." },
   { id: "iland", name: "Iland Tower 3 Residences", status: "ongoing", category: "High-Rise", place: "8362 Arcadio Santos Avenue, Parañaque City", developer: "ISOC Holdings", amount: "₱200,000,000.00", poc: 18.33, image: "images/projects/iland.jpg", blurb: "Tower 3 residences on Arcadio Santos Avenue." },
-  { id: "garden-city", name: "Garden City", status: "ongoing", category: "High-Rise", place: "Las Piñas–Talaba Diversion Road, Brgy. Zapote 3, Bacoor City, Cavite", developer: "Golden Bay Prime Landholdings", amount: "₱1,095,657,032.35", poc: 5.22, image: "images/deck/garden-city.jpeg", blurb: "Residential development in Bacoor, just getting underway." },
+  { id: "garden-city", name: "Garden City", status: "ongoing", category: "High-Rise", place: "Las Piñas–Talaba Diversion Road, Brgy. Zapote 3, Bacoor City, Cavite", developer: "Golden Bay Prime Landholdings", amount: "₱1,095,657,032.35", poc: 5.22, image: "images/deck/garden-city-hi.jpg", blurb: "Residential development in Bacoor, just getting underway." },
 
   { id: "studio-a", name: "Studio A Residences", status: "completed", category: "High-Rise", place: "Xavier Ville Ave. cor. Esteban Abada, Loyola Heights, Quezon City", developer: "Filinvest Land Incorporated", amount: "₱328,500,000.00", scope: "34 storeys", image: "images/projects/studio-a.jpg", blurb: "Completed residential tower in Loyola Heights." },
   { id: "century-peak", name: "Century Peak Tower", status: "completed", category: "High-Rise", place: "Malate, Manila", developer: "Century Peak Hotel Management", amount: "₱145,000,000.00", scope: "45 storeys", image: "images/projects/century-peak.jpg", blurb: "Completed tower in Malate." },
@@ -23,7 +23,7 @@ const PROJECTS = [
   { id: "torre-lorenzo", name: "Two Torre Lorenzo", status: "completed", category: "High-Rise", place: "Taft Avenue, Manila", developer: "Lapanday Properties", amount: "₱320,000,000.00", scope: "33 storeys", image: "images/projects/torre-lorenzo.jpg", blurb: "Completed tower on Taft Avenue." },
   { id: "corporate-145", name: "Corporate 145", status: "completed", category: "Commercial", place: "MOA Complex, Pasay City", developer: "Columbia Properties", amount: "₱215,000,000.00", scope: "14 storeys", image: "images/projects/corporate-145.jpg", blurb: "Completed office building at the MOA Complex." },
   { id: "kl-mosaic", name: "KL Mosaic Tower", status: "completed", category: "High-Rise", place: "Makati City", developer: "Vista Land & Lifescapes Inc.", amount: "₱305,000,000.00", scope: "32 storeys", image: "images/projects/kl-mosaic.jpg", blurb: "Completed tower in Makati." },
-  { id: "sea-2", name: "Sea 2 Residences", status: "completed", category: "High-Rise", place: "Lot 2, Brgy. Zone 10, Central Business Park 1A, Pasay City", developer: "SM Development Corporation", amount: "₱1,183,000,000.00", image: "images/projects/sea-2.jpg", blurb: "Completed SMDC residences in Pasay." },
+  { id: "sea-2", name: "Sea 2 Residences", status: "completed", category: "High-Rise", place: "Lot 2, Brgy. Zone 10, Central Business Park 1A, Pasay City", developer: "SM Development Corporation", amount: "₱1,183,000,000.00", image: "images/projects/sea-2-hi.jpg", blurb: "Completed SMDC residences in Pasay." },
   { id: "ridgewood", name: "Ridgewood Towers", status: "completed", category: "High-Rise", place: "Pasong Tamo, Makati City", developer: "C5 Mansion Development", amount: "₱239,000,000.00", scope: "18-storey Tower 2 and 25-storey Tower 3", image: "images/projects/ridgewood.jpg", blurb: "Two completed towers in Makati." },
   { id: "lush", name: "Lush Residences", status: "completed", category: "High-Rise", place: "Bagtikan Street, Makati City", developer: "SM Development Corporation", amount: "₱577,000,000.00", scope: "22 storeys", image: "images/projects/lush.jpg", blurb: "Completed SMDC tower in Makati." },
   { id: "untv", name: "UNTV Broadcast Center", status: "completed", category: "Commercial", place: "EDSA, Quezon City", amount: "₱340,000,000.00", scope: "18 storeys, with three discs on top", image: "images/projects/untv.jpg", blurb: "Broadcast center along EDSA." },
@@ -62,12 +62,12 @@ const PROJECTS = [
 ];
 
 const LEADERS = [
-  { name: "Engr. John Paul Pe", role: "President & CEO", summary: "Leads Archipelago Builders Corporation. Authorized Managing Officer on the PCAB license.", departments: ["QAQC Department", "Motorpool Department (Head Office)"] },
-  { name: "Engr. Paulo Lorenzo Pe", role: "Chief Operations Officer / Board of Directors", summary: "Heads day-to-day operations and the head-office support departments.", departments: ["Estimating", "Procurement", "Facilities & Admin", "CAMD", "Legal", "IT", "Human Capital & Services"] },
-  { name: "Mr. Noel Gayos", role: "Overall Project Consultant", summary: "Covers people on site, from technical staff through safety and the workforce.", departments: ["Project Site Employees (Technical / Non-technical)", "Safety & Health", "Project Site Workers"] },
-  { name: "Arch. Belinda Pe-Correa", role: "SCMD Head / Corporate Secretary / Board of Directors", summary: "Leads subcontractor management and serves as corporate secretary.", departments: ["Sub-contractors Department (Head Office)"] },
-  { name: "Ms. Angelina Pe-Dizon", role: "Corporate Treasurer / Board of Directors", summary: "Looks after finance, audit, administration, and inventory.", departments: ["Accounting", "Audit", "Administration", "Inventory & WHSE"] },
-  { name: "Ms. Cynthia Pe", role: "Board of Directors", summary: "Member of the Board of Directors.", departments: ["Board of Directors"] }
+  { name: "Engr. John Paul Pe", role: "President & CEO", ceo: true, summary: "Leads the company and oversees all divisions. QAQC and Motorpool report directly to the President.", photo: "images/team/john-paul.png", group: "Direct departments", departments: [{ name: "QAQC", place: "Head Office" }, { name: "Motorpool", place: "Head Office" }] },
+  { name: "Engr. Paulo Lorenzo Pe", role: "Chief Operations Officer / Board of Directors", summary: "Heads operations and the core head-office functions that support every project.", photo: "images/team/paulo.png", group: "Head-office departments", departments: [{ name: "Estimating", place: "Head Office" }, { name: "Procurement", place: "Head Office" }, { name: "Facilities & Admin", place: "Head Office" }, { name: "CAMD", place: "Head Office" }, { name: "Legal", place: "Head Office" }, { name: "IT", place: "Head Office" }, { name: "Human Capital", place: "Head Office" }] },
+  { name: "Mr. Noel Gayos", role: "Overall Project Consultant", summary: "Advises on project delivery and oversees safety, site employees and site workers.", photo: "images/team/noel.png", group: "Project teams", departments: [{ name: "Project Site Employees", place: "Technical / Non-technical" }, { name: "Safety & Health", place: "Project site" }, { name: "Project Site Workers", place: "Project site" }] },
+  { name: "Arch. Belinda Pe-Correa", role: "SCMD Head / Corporate Secretary / Board of Directors", summary: "Heads SCMD and serves as Corporate Secretary, with the sub-contractors department reporting through her.", photo: "images/team/belinda.png", group: "Departments", departments: [{ name: "Sub-contractors", place: "Head Office" }] },
+  { name: "Ms. Angelina Pe-Dizon", role: "Corporate Treasurer / Board of Directors", summary: "Serves as Corporate Treasurer and oversees finance, audit, administration and inventory.", photo: "images/team/angelina.png", group: "Head-office departments", departments: [{ name: "Accounting", place: "Head Office" }, { name: "Audit", place: "Head Office" }, { name: "Administration", place: "Head Office" }, { name: "Inventory & Warehouse", place: "Head Office" }] },
+  { name: "Ms. Cynthia Pe", role: "Board of Directors", summary: "Member of the Board of Directors.", photo: "images/team/cynthia.png", group: "Departments", departments: [] }
 ];
 
 const VIDEOS = [
@@ -76,7 +76,7 @@ const VIDEOS = [
   { id: "OfLrph5KtCo", title: "Christmas Party 2023 highlights" }
 ];
 
-const CATEGORIES = ["All", "High-Rise", "Commercial", "Institutional", "School", "Pharmaceutical", "Manufacturing", "Housing", "Landmark"];
+const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image).map((project) => project.category))];
 
 (() => {
   const header = document.querySelector(".site-header");
@@ -188,30 +188,71 @@ const CATEGORIES = ["All", "High-Rise", "Commercial", "Institutional", "School",
     });
   });
 
-  const leaderList = document.querySelector("#leader-list");
-  const leaderDetail = document.querySelector("#leader-detail");
-  const showLeader = (index) => {
-    const leader = LEADERS[index];
-    leaderList.querySelectorAll("button").forEach((btn, i) => {
-      btn.classList.toggle("is-active", i === index);
-      btn.setAttribute("aria-selected", i === index ? "true" : "false");
+  const orgChart = document.querySelector("#org-chart");
+  const orgPanel = document.querySelector("#org-panel");
+  let openLeader = -1;
+  const leaderCard = (leader, index) => `
+    <button class="org-card${leader.ceo ? " is-ceo" : ""}" type="button" data-leader="${index}" aria-expanded="false">
+      <img src="${leader.photo}" alt="" />
+      <strong>${leader.name}</strong>
+      <span>${leader.role}</span>
+      <em class="org-pill">View details</em>
+    </button>`;
+  if (orgChart && orgPanel) {
+    const [ceo, ...reports] = LEADERS;
+    orgChart.innerHTML = `
+      <div class="org-board">
+        ${leaderCard(ceo, 0)}
+        <div class="org-stem" aria-hidden="true"></div>
+        <div class="org-row">
+          ${reports.map((leader, index) => leaderCard(leader, index + 1)).join("")}
+        </div>
+      </div>`;
+    const showLeader = (index) => {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      orgChart.querySelectorAll(".org-card").forEach((card, cardIndex) => {
+        const on = cardIndex === index;
+        card.classList.toggle("is-open", on);
+        card.setAttribute("aria-expanded", on ? "true" : "false");
+        const pill = card.querySelector(".org-pill");
+        if (pill) pill.textContent = on ? "Hide details" : "View details";
+      });
+      if (index < 0) {
+        orgPanel.hidden = true;
+        orgPanel.innerHTML = "";
+        openLeader = -1;
+        return;
+      }
+      const leader = LEADERS[index];
+      const count = leader.departments.length;
+      const cards = count
+        ? `<h4>${leader.group} (${count})</h4><div class="dept-grid">${leader.departments.map((dept) => `<article class="dept-card"><strong>${dept.name}</strong><span>${dept.place}</span></article>`).join("")}</div>`
+        : `<p class="org-empty">No departments report to this position.</p>`;
+      orgPanel.hidden = false;
+      orgPanel.innerHTML = `
+        <div class="org-panel-head">
+          <img src="${leader.photo}" alt="" />
+          <div>
+            <h3>${leader.name}</h3>
+            <p>${leader.role}</p>
+          </div>
+          <button type="button" class="org-close" aria-label="Close details">×</button>
+        </div>
+        <p class="org-summary">${leader.summary}</p>
+        ${cards}`;
+      openLeader = index;
+      orgPanel.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest" });
+    };
+    orgChart.addEventListener("click", (event) => {
+      const card = event.target.closest(".org-card");
+      if (!card) return;
+      const index = Number(card.dataset.leader);
+      showLeader(index === openLeader ? -1 : index);
     });
-    leaderDetail.innerHTML = `
-      <h3>${leader.name}</h3>
-      <p class="muted">${leader.role}</p>
-      <p>${leader.summary}</p>
-      <ul class="dept-list">${leader.departments.map((dept) => `<li>${dept}</li>`).join("")}</ul>`;
-  };
-  LEADERS.forEach((leader, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "leader-card";
-    button.setAttribute("role", "tab");
-    button.innerHTML = `${leader.name}<small>${leader.role}</small>`;
-    button.addEventListener("click", () => showLeader(index));
-    leaderList.appendChild(button);
-  });
-  showLeader(0);
+    orgPanel.addEventListener("click", (event) => {
+      if (event.target.closest(".org-close")) showLeader(-1);
+    });
+  }
 
   const state = { query: "", status: "all", category: "All", sort: "featured" };
   const grid = document.querySelector("#project-grid");
@@ -261,6 +302,7 @@ const CATEGORIES = ["All", "High-Rise", "Commercial", "Institutional", "School",
 
   const filtered = () => {
     const list = PROJECTS.filter((project) => {
+      if (!project.image) return false;
       if (state.status !== "all" && project.status !== state.status) return false;
       if (state.category !== "All" && project.category !== state.category) return false;
       if (!state.query) return true;
@@ -308,7 +350,16 @@ const CATEGORIES = ["All", "High-Rise", "Commercial", "Institutional", "School",
     grid.querySelectorAll(".project-open").forEach((button) => {
       button.addEventListener("click", () => openProject(button.dataset.id));
     });
+    grid.scrollTo({ left: 0 });
   };
+
+  const scrollProjects = (direction) => {
+    const card = grid.querySelector(".project-card");
+    const distance = card ? card.getBoundingClientRect().width + 14 : 340;
+    grid.scrollBy({ left: direction * distance, behavior: "smooth" });
+  };
+  document.querySelector("#project-prev")?.addEventListener("click", () => scrollProjects(-1));
+  document.querySelector("#project-next")?.addEventListener("click", () => scrollProjects(1));
 
   const dash = document.querySelector("#progress-dash");
   const ongoingTop = PROJECTS.filter((project) => project.status === "ongoing" && project.poc != null)
@@ -496,30 +547,31 @@ const CATEGORIES = ["All", "High-Rise", "Commercial", "Institutional", "School",
     applyTransform();
   }, { passive: false });
 
-  const videoList = document.querySelector("#video-list");
-  const frame = document.querySelector("#yt-frame");
-  VIDEOS.forEach((video, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = video.title;
-    button.classList.toggle("is-active", index === 0);
-    button.addEventListener("click", () => {
-      frame.src = `https://www.youtube-nocookie.com/embed/${video.id}`;
-      videoList.querySelectorAll("button").forEach((btn) => btn.classList.toggle("is-active", btn === button));
-    });
-    videoList.appendChild(button);
-  });
-
+  const copyText = async (value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch {
+      const area = document.createElement("textarea");
+      area.value = value;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.left = "-9999px";
+      document.body.appendChild(area);
+      area.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch { ok = false; }
+      area.remove();
+      return ok;
+    }
+  };
   document.querySelectorAll(".copy-btn").forEach((button) => {
     button.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(button.dataset.copy);
-        const original = button.textContent;
-        button.textContent = "Copied";
-        setTimeout(() => { button.textContent = original; }, 1400);
-      } catch {
-        button.textContent = "Copy the link";
-      }
+      const original = button.dataset.label || button.textContent;
+      button.dataset.label = original;
+      const ok = await copyText(button.dataset.copy);
+      button.textContent = ok ? "Copied" : "Copy failed";
+      window.setTimeout(() => { button.textContent = original; }, 1800);
     });
   });
 
