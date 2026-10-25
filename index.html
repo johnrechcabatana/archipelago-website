@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archipelago Builders Corporation</title>
-  <meta name="description" content="Archipelago Builders Corporation — Category AAA general building and engineering contractor since 1965. Quezon City, Philippines." />
+  <title>Archipelago Builders Corporation | Beyond Legacy</title>
+  <meta name="description" content="Archipelago Builders Corporation is a Category AAA general contractor in Quezon City. Engineers and contractors since the 1960s — road, commercial, industrial, institutional, and high-rise construction." />
+  <link rel="icon" href="images/headerlogo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body id="home">
-  <header class="site-header" id="top" >
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="site-header" id="top">
     <div class="nav-bar">
       <a class="logo" href="#home" aria-label="Archipelago Builders Corporation home">
-        <span class="logo-mark"><img src="images/headerlogo.jpg"></span>
-        <span class="logo-text">Archipelago Builders Corporation</span>
+        <img src="images/headerlogo.jpg" alt="" />
+        <span class="logo-text">
+          <strong>Archipelago Builders</strong>
+          <span>Engineers | Contractors</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span></span><span></span>
@@ -24,297 +30,443 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#clients">Clients</a>
-        <a href="#team">Team</a>
-        <a href="#careers">Careers</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#organization">Organization</a>
+        <a href="#partners">Partners</a>
+        <a href="#connect">Connect</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
+      <div class="header-social">
+        <a href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.5 8.5V6.8c0-.7.5-1 1.2-1H17V3h-2.1C12.2 3 11 4.3 11 6.6v1.9H9v2.8h2V21h3.5v-9.7h2.3l.4-2.8h-2.7z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="home">
     <section class="hero" aria-label="Introduction">
-      <div class="hero-media" aria-hidden="true">
-        <img src="images/background.jpeg" alt="" />
-        <div class="hero-veil"></div>
+      <div class="hero-media" id="hero-slides" aria-hidden="true">
+        <img class="hero-slide is-active" src="images/deck/pasig-cityhall.jpeg" alt="" />
+        <span class="hero-spot" aria-hidden="true"></span>
+        <span class="hero-sheen" id="hero-sheen" aria-hidden="true"></span>
       </div>
       <div class="hero-content">
-        <p class="hero-brand">Archipelago Builders Corporation</p>
-        <h1>Building the Philippines since 1965</h1>
-        <p class="hero-lead">Category AAA general building and engineering contractor for horizontal and vertical construction across Metro Manila, Luzon, and the Visayas.</p>
+        <p class="hero-kicker">Quezon City, Philippines · Company Profile 2026</p>
+        <h1>Beyond <em>Legacy</em></h1>
+        <p class="hero-lead">Archipelago Builders Corporation is a Category AAA general contractor. Engineers and contractors for road, commercial, industrial, institutional, and high-rise work across the archipelago.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View projects</a>
-          <a class="btn btn-ghost" href="#contact">Talk to us</a>
+          <a class="btn btn-gold" href="#projects">Explore projects</a>
+          <a class="btn btn-ghost" href="#organization">Organization chart</a>
+        </div>
+        <div class="hero-social">
+          <a class="social-pill yt" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z"/></svg>
+            </span>
+            YouTube
+          </a>
+          <a class="social-pill fb" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 8.5V6.8c0-.7.5-1 1.2-1H17V3h-2.1C12.2 3 11 4.3 11 6.6v1.9H9v2.8h2V21h3.5v-9.7h2.3l.4-2.8h-2.7z"/></svg>
+            </span>
+            Facebook
+          </a>
+        </div>
+        <div class="hero-stage" id="hero-stage">
+          <button type="button" class="hero-card" id="hero-card">
+            <span class="hero-card-kicker">Featured project</span>
+            <strong id="hero-card-name">The Modern Pasig City Hall</strong>
+            <span id="hero-card-meta">Pasig City</span>
+          </button>
+          <div class="hero-controls">
+            <button type="button" class="hero-nav" id="hero-prev" aria-label="Previous project">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5 8 12l7 7"/></svg>
+            </button>
+            <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Featured projects"></div>
+            <button type="button" class="hero-nav" id="hero-next" aria-label="Next project">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <div class="hero-progress" aria-hidden="true"><span id="hero-progress"></span></div>
         </div>
       </div>
-      <a class="hero-scroll" href="#about" aria-label="Scroll to about">
-        <span>Discover</span>
-      </a>
+      <a class="hero-scroll" href="#about">Discover</a>
     </section>
 
     <section class="section about" id="about">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">About</p>
-          <h2>Who we are</h2>
-          <p class="section-lead">Six decades of construction experience, from a rented room on Rizal Avenue to a Category AAA contractor shaping the country’s built future.</p>
+          <p class="eyebrow">A story of competence and resilience</p>
+          <h2>Built to serve the archipelago</h2>
+          <p class="section-lead">Engr. Paulino Go Pe started Archipelago Builders in the mid-1960s with Php 500, determined to serve God and country by building across the islands.</p>
         </div>
-        <div class="about-grid">
-          <div class="about-visual reveal">
-            <img src="images/about.jpg" alt="Archipelago Builders Corporation building and operations" />
+
+        <ul class="stats-bar" aria-label="Company highlights">
+          <li><span class="stat-value" data-count="60" data-suffix="+">0</span><span class="stat-label">Years of building</span></li>
+          <li><span class="stat-value" data-count="25" data-prefix="₱" data-suffix="B">0</span><span class="stat-label">Completed project value</span></li>
+          <li><span class="stat-value" data-count="18">0</span><span class="stat-label">Tower cranes</span></li>
+          <li><span class="stat-value stat-text">AAA</span><span class="stat-label">PCAB category</span></li>
+          <li><span class="stat-value" data-count="9.6" data-prefix="₱" data-suffix="B" data-decimals="1">0</span><span class="stat-label">NFCC headroom</span></li>
+        </ul>
+
+        <div class="about-grid" style="margin-top:2rem">
+          <div class="about-visual">
+            <figure class="frame">
+              <img src="images/deck/head-office.jpeg" alt="Archipelago Builders Corporation head office along North Avenue, Quezon City, built in the 1980s" />
+              <figcaption class="caption">Head office along North Avenue, Quezon City, built in the 1980s.</figcaption>
+            </figure>
+            <figure class="frame">
+              <img src="images/deck/first-vehicle.jpg" alt="Engr. Paulino Go Pe with the company’s first service vehicle, used at the Lirag Textile building site in 1966" />
+              <figcaption class="caption">The founder with the first service vehicle, used to carry water across the Montalban River to the Lirag Textile site in 1966.</figcaption>
+            </figure>
           </div>
-          <div class="about-copy reveal">
-            <p>The company was established in 1965, engaging in General Building Construction under the name Archipelago Builders. The office started from renting a room of a building at Rizal Avenue, Sta. Cruz, Manila, with the warehouse and steel shop at Old Samson Road, Balintawak, Quezon City.</p>
-            <p>From Building Contractor–Category “C”, the firm rose to General Building Contractor–Class “B”, then in 1977 to General Engineering and General Building–Category “A”, engaged in both horizontal and vertical construction.</p>
-            <p>In 1979, Archipelago Builders built its own 3½-storey headquarters at 29 North Avenue, Diliman, Quezon City. Growth continued through Category “AA” in 1987 and Category “AAA” in 1998.</p>
-            <p>Today, after many years of construction experience, Archipelago Builders aims to further develop the quality of construction and help build the future for this country.</p>
-            <dl class="milestones">
-              <div><dt>1965</dt><dd>Founded</dd></div>
-              <div><dt>1977</dt><dd>Category A</dd></div>
-              <div><dt>1987</dt><dd>Category AA</dd></div>
-              <div><dt>1998</dt><dd>Category AAA</dd></div>
-            </dl>
+          <div>
+            <p>Paulino was born in Manila and raised in Margosatubig, Zamboanga del Sur. He saw the hardships of his townmates during the Second World War. Those lessons shaped a modest, steady company. His dream was to build all over the archipelago — that is where the name comes from.</p>
+            <p>The first office was a rented room on Rizal Avenue in Sta. Cruz, Manila, with a warehouse and steel shop on Old Samson Road, Balintawak, Quezon City. One of the earliest jobs was a residence on D. Tuazon Street. In 1966 the firm built the Lirag Textile Mill in Montalban, Rizal. In 1981 it delivered the Mercury Drug head office and distribution center in Libis.</p>
+            <blockquote class="quote">
+              <p>“It’s quite nice if we could construct all around the islands.”</p>
+              <cite>Engr. Paulino Go Pe, Founder</cite>
+            </blockquote>
+            <div class="mission-grid">
+              <article class="mission-card">
+                <h3>Mission</h3>
+                <p>Serve God and country by contributing to nation-building through construction, and build across the islands.</p>
+              </article>
+              <article class="mission-card">
+                <h3>Vision</h3>
+                <p>A premier construction company, carried by honest, hardworking, competent, and skillful people.</p>
+              </article>
+            </div>
           </div>
         </div>
 
-        <ul class="stats-bar reveal" aria-label="Company highlights">
-          <li>
-            <span class="stat-value" data-count="49" data-suffix="+">0</span>
-            <span class="stat-label">Projects delivered</span>
-          </li>
-          <li>
-            <span class="stat-value" data-count="60" data-suffix="+">0</span>
-            <span class="stat-label">Years of experience</span>
-          </li>
-          <li>
-            <span class="stat-value" data-count="10" data-suffix="">0</span>
-            <span class="stat-label">Project categories</span>
-          </li>
-          <li>
-            <span class="stat-value stat-text">AAA</span>
-            <span class="stat-label">PCAB category</span>
-          </li>
-        </ul>
+        <div class="timeline" role="tablist" aria-label="Company timeline">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-era="founding">1960s</button>
+          <button type="button" role="tab" aria-selected="false" data-era="license">License</button>
+          <button type="button" role="tab" aria-selected="false" data-era="growth">1980s</button>
+          <button type="button" role="tab" aria-selected="false" data-era="corp">2022</button>
+          <button type="button" role="tab" aria-selected="false" data-era="now">Today</button>
+        </div>
+        <article class="era is-active" data-era="founding">
+          <h3>Humble beginnings</h3>
+          <p>From a rented room and a steel shop, the company took on housing and industrial work. About ten years in, personnel had doubled, three more rooms were rented, and the warehouse grew by three compartments. The license moved from PCAB Category C to Category B, opening the door to larger projects.</p>
+        </article>
+        <article class="era" data-era="license">
+          <h3>Category by category</h3>
+          <p>The license was upgraded as the work grew. By 1987 Archipelago held a Double A category. In 1988 it earned Triple A as a general building contractor. The current PCAB regular contractor’s license, No. 33942, covers General Building and General Engineering at Category AAA, valid 4 September 2025 to 4 September 2027.</p>
+        </article>
+        <article class="era" data-era="growth">
+          <h3>A house of its own</h3>
+          <p>The head office on North Avenue rose in the 1980s. Through inflation, economic crisis, and political strife, the company was awarded work in Metro Manila, Southern Luzon, and the Visayas — factories, warehouses, hotels, and condominiums in Laguna, Bulacan, Rizal, Pangasinan, Batangas, Cavite, Benguet, Cagayan de Oro, Davao, Iloilo, Cebu, and Zamboanga.</p>
+        </article>
+        <article class="era" data-era="corp">
+          <h3>Archipelago Builders Corporation</h3>
+          <p>In March 2022 the sole proprietorship gave way to a new corporate citizen, Archipelago Builders Corporation, with the same aim: raise the quality of construction and help build the country’s future.</p>
+        </article>
+        <article class="era" data-era="now">
+          <h3>Room to take on more</h3>
+          <p>Completed work stands at Php 25 billion, from industrial plants to high-rise condominiums. Five ongoing projects are takeovers that clients trusted ABC to finish. With current work considered, NFCC is still Php 9.6 billion, and the company is bidding or negotiating on 10 projects.</p>
+        </article>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>What we build</h2>
-          <p class="section-lead">General building and engineering delivery for public and private clients across roads, commercial, industrial, institutional, and high-rise work.</p>
+          <p class="eyebrow">What we build</p>
+          <h2>General contractor, AAA</h2>
+          <p class="section-lead">Open a service to read the scope, then jump into the project record.</p>
         </div>
-        <ul class="service-list">
-          <li class="reveal">
-            <span class="service-num">01</span>
-            <h3>Road Projects</h3>
-            <p>Horizontal civil works and infrastructure that connect communities and support commerce.</p>
-          </li>
-          <li class="reveal">
-            <span class="service-num">02</span>
+        <div class="service-list" id="service-list">
+          <button class="service-card is-open" type="button" data-service="Road" aria-expanded="true">
+            <span class="num">01</span>
+            <h3>Road projects</h3>
+            <p>Horizontal civil works that connect communities and carry commerce, delivered with the same AAA discipline as vertical building.</p>
+          </button>
+          <button class="service-card" type="button" data-service="Commercial" aria-expanded="false">
+            <span class="num">02</span>
             <h3>Commercial</h3>
-            <p>Showrooms, offices, and mixed-use facilities built for performance and lasting presence.</p>
-          </li>
-          <li class="reveal">
-            <span class="service-num">03</span>
+            <p>Stores, hotels, markets, and business buildings — from Makro and Garden Orchid Hotel to plazas across Luzon and the Visayas.</p>
+          </button>
+          <button class="service-card" type="button" data-service="Industrial" aria-expanded="false">
+            <span class="num">03</span>
             <h3>Industrial</h3>
-            <p>Manufacturing plants, cold storage, and specialized production environments.</p>
-          </li>
-          <li class="reveal">
-            <span class="service-num">04</span>
+            <p>Pharmaceutical plants, distribution centers, and manufacturing facilities, including the EK South food plant at Carmelray.</p>
+          </button>
+          <button class="service-card" type="button" data-service="Institutional" aria-expanded="false">
+            <span class="num">04</span>
             <h3>Institutional</h3>
-            <p>Schools, sports complexes, and civic facilities that serve the public every day.</p>
-          </li>
-          <li class="reveal">
-            <span class="service-num">05</span>
-            <h3>High-Rise Building</h3>
-            <p>Vertical construction with the discipline and safety standards Category AAA demands.</p>
-          </li>
-        </ul>
+            <p>Campuses, chapels, and civic buildings — Ateneo schools, St. Peter chapels, and the Modern Pasig City Hall.</p>
+          </button>
+          <button class="service-card" type="button" data-service="High-Rise" aria-expanded="false">
+            <span class="num">05</span>
+            <h3>High-rise</h3>
+            <p>Towers for SMDC, Filinvest, Vista Land, Megaworld, and other developers, including takeover work brought to completion.</p>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="section projects" id="projects">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Projects</p>
-          <h2>Selected work</h2>
-          <p class="section-lead"><strong class="project-count">49+</strong> featured projects across housing, showrooms, cold storage, manufacturing, pharmaceutical, sports, commercial, school, and high-rise work nationwide.</p>
+          <p class="eyebrow">Then and now</p>
+          <h2>Projects</h2>
+          <p class="section-lead">Search the 2026 company profile. Amounts and percent complete are as stated in that profile. Select a card for the full record.</p>
         </div>
-        <div class="project-filters" role="tablist" aria-label="Project categories">
-          <button type="button" class="is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button type="button" data-filter="housing" role="tab" aria-selected="false">Housing</button>
-          <button type="button" data-filter="car" role="tab" aria-selected="false">Car Showroom</button>
-          <button type="button" data-filter="cold" role="tab" aria-selected="false">Cold Storage</button>
-          <button type="button" data-filter="manufacturing" role="tab" aria-selected="false">Manufacturing</button>
-          <button type="button" data-filter="pharmaceutical" role="tab" aria-selected="false">Pharmaceutical</button>
-          <button type="button" data-filter="sports" role="tab" aria-selected="false">Sports</button>
-          <button type="button" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
-          <button type="button" data-filter="school" role="tab" aria-selected="false">School</button>
-          <button type="button" data-filter="highrise" role="tab" aria-selected="false">High Rise</button>
-          <button type="button" data-filter="ongoing" role="tab" aria-selected="false">Ongoing</button>
-        </div>
-        <div class="project-grid">
-          <article class="project-item reveal" data-category="housing">
-            <img src="images/projects/housing.jpg" alt="Housing project" loading="lazy" />
-            <div class="project-meta"><span>Housing</span><h3>Residential development</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="car">
-            <img src="images/projects/car.jpg" alt="Mitsubishi Motors showroom" loading="lazy" />
-            <div class="project-meta"><span>Car Showroom</span><h3>Mitsubishi Motors showroom</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="cold">
-            <img src="images/projects/cold.jpg" alt="Cold storage facility" loading="lazy" />
-            <div class="project-meta"><span>Cold Storage</span><h3>Cold storage facility</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="manufacturing">
-            <img src="images/projects/manufacturing.jpg" alt="Manufacturing plant" loading="lazy" />
-            <div class="project-meta"><span>Manufacturing</span><h3>Industrial plant</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="pharmaceutical">
-            <img src="images/projects/pharma.jpg" alt="Pharmaceutical facility" loading="lazy" />
-            <div class="project-meta"><span>Pharmaceutical</span><h3>Pharma facility</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="sports">
-            <img src="images/projects/sports.jpg" alt="Sports complex" loading="lazy" />
-            <div class="project-meta"><span>Sports</span><h3>Sports complex &amp; gymnasium</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="commercial">
-            <img src="images/projects/commercial.jpg" alt="Commercial building" loading="lazy" />
-            <div class="project-meta"><span>Commercial</span><h3>Commercial building</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="commercial">
-            <img src="images/projects/commercial2.jpg" alt="Commercial development" loading="lazy" />
-            <div class="project-meta"><span>Commercial</span><h3>Commercial development</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="school">
-            <img src="images/projects/school.jpg" alt="School building" loading="lazy" />
-            <div class="project-meta"><span>School</span><h3>Educational facility</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="highrise">
-            <img src="images/projects/highrise.jpg" alt="High-rise building" loading="lazy" />
-            <div class="project-meta"><span>High Rise</span><h3>High-rise construction</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="highrise">
-            <img src="images/projects/highrise2.jpg" alt="High-rise tower" loading="lazy" />
-            <div class="project-meta"><span>High Rise</span><h3>Vertical development</h3></div>
-          </article>
-          <article class="project-item reveal" data-category="ongoing">
-            <img src="images/projects/ongoing.jpg" alt="Ongoing construction project" loading="lazy" />
-            <div class="project-meta"><span>Ongoing</span><h3>Active construction site</h3></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section clients" id="clients">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Clients &amp; Partners</p>
-          <h2>Trusted by developers and institutions</h2>
-          <p class="section-lead">Selected clients and project partners across real estate, media, automotive, and mixed-use development.</p>
-        </div>
-        <ul class="client-list">
-          <li class="reveal">
-            <span class="client-sector">Real Estate</span>
-            <h3>Property Company of Friends (Profriends)</h3>
-            <p>General contractor for Westwind at Lancaster New City</p>
-          </li>
-          <li class="reveal">
-            <span class="client-sector">Real Estate</span>
-            <h3>Golden Bay Prime Landholdings</h3>
-            <p>General contractor for Garden City, Bacoor</p>
-          </li>
-          <li class="reveal">
-            <span class="client-sector">Real Estate</span>
-            <h3>Vista Residences</h3>
-            <p>General contractor for Vista Recto Residences, Manila</p>
-          </li>
-          <li class="reveal">
-            <span class="client-sector">Media</span>
-            <h3>UNTV</h3>
-            <p>Construction partner for the UNTV project along EDSA, Quezon City</p>
-          </li>
-          <li class="reveal">
-            <span class="client-sector">Automotive</span>
-            <h3>Mitsubishi Motors</h3>
-            <p>Car showroom construction</p>
-          </li>
-          <li class="reveal">
-            <span class="client-sector">Automotive</span>
-            <h3>Chana &amp; FAW</h3>
-            <p>Car showroom construction</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section team" id="team">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Team</p>
-          <h2>Meet the team</h2>
-          <p class="section-lead">Engineers, project managers, and field leaders who deliver Category AAA standards on every site.</p>
-        </div>
-        <div class="team-grid">
-          <figure class="team-card reveal">
-            <img src="images/team/team1.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-          <figure class="team-card reveal">
-            <img src="images/team/team2.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-          <figure class="team-card reveal">
-            <img src="images/team/team3.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-          <figure class="team-card reveal">
-            <img src="images/team/team4.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-          <figure class="team-card reveal">
-            <img src="images/team/team5.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-          <figure class="team-card reveal">
-            <img src="images/team/team6.jpg" alt="Archipelago Builders team member" loading="lazy" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section careers" id="careers">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Careers</p>
-          <h2>Build a career with us</h2>
-          <p class="section-lead">Join a contractor with more than 60 years of experience shaping roads, plants, campuses, and skylines across the archipelago.</p>
-        </div>
-        <div class="careers-layout">
-          <div class="careers-intro reveal">
-            <p>We look for people who take pride in craft, safety, and delivery — from site supervisors and engineers to estimators and office support.</p>
-            <a class="btn btn-primary" href="mailto:abcorpinfo@archipelagobuilders.com?subject=Career%20Inquiry">Send your résumé</a>
+        <div class="dash" id="progress-dash" aria-label="Ongoing project progress"></div>
+        <div class="toolbar">
+          <div class="search-row">
+            <input id="project-search" type="search" placeholder="Search name, city, or developer" aria-label="Search projects" />
+            <div class="seg" role="tablist" aria-label="Project status">
+              <button type="button" class="is-active" data-status="all" role="tab" aria-selected="true">All</button>
+              <button type="button" data-status="completed" role="tab" aria-selected="false">Completed</button>
+              <button type="button" data-status="ongoing" role="tab" aria-selected="false">Ongoing</button>
+            </div>
           </div>
-          <ul class="job-list">
-            <li class="reveal">
-              <div>
-                <h3>Project Engineer</h3>
-                <p>Quezon City · Full-time</p>
-              </div>
-              <a href="mailto:abcorpinfo@archipelagobuilders.com?subject=Application%20-%20Project%20Engineer">Apply</a>
-            </li>
-            <li class="reveal">
-              <div>
-                <h3>Site Supervisor</h3>
-                <p>Field assignments · Full-time</p>
-              </div>
-              <a href="mailto:abcorpinfo@archipelagobuilders.com?subject=Application%20-%20Site%20Supervisor">Apply</a>
-            </li>
-            <li class="reveal">
-              <div>
-                <h3>Quantity Surveyor / Estimator</h3>
-                <p>Quezon City · Full-time</p>
-              </div>
-              <a href="mailto:abcorpinfo@archipelagobuilders.com?subject=Application%20-%20Estimator">Apply</a>
-            </li>
-          </ul>
+          <div class="chips" id="category-filters" aria-label="Project categories"></div>
+          <div class="tool-row">
+            <p class="result-count" id="project-count" aria-live="polite"></p>
+            <label>Sort
+              <select id="project-sort" aria-label="Sort projects">
+                <option value="featured">Featured</option>
+                <option value="name">Name</option>
+                <option value="progress">Progress</option>
+                <option value="amount">Contract amount</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+        <p class="empty" id="project-empty" hidden>No projects match that search. Try another city, developer, or category.</p>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Why build with ABC</p>
+          <h2 class="panel-title">Clients come back</h2>
+          <p class="section-lead">Sixty years of solutions, in-house precast, and a record of finishing work others started.</p>
+        </div>
+        <div class="why-list" id="why-list">
+          <div class="why-item is-open">
+            <button class="why-toggle" type="button" aria-expanded="true">People first <span aria-hidden="true">+</span></button>
+            <div class="why-body"><p>ABC invests in the knowledge, skills, attributes, and experience its people need to build the project in front of them.</p></div>
+          </div>
+          <div class="why-item">
+            <button class="why-toggle" type="button" aria-expanded="false">A 60-year track record <span aria-hidden="true">+</span></button>
+            <div class="why-body"><p>The record is the proof. Completed work is worth Php 25 billion, from industrial buildings to high-rise condominiums.</p></div>
+          </div>
+          <div class="why-item">
+            <button class="why-toggle" type="button" aria-expanded="false">Own precast plants <span aria-hidden="true">+</span></button>
+            <div class="why-body"><p>Archiwall produces interior wall panels and Archicast produces exterior precast. Both cut build time and cost with ready-to-finish concrete wall systems.</p></div>
+          </div>
+          <div class="why-item">
+            <button class="why-toggle" type="button" aria-expanded="false">Takeover specialist <span aria-hidden="true">+</span></button>
+            <div class="why-body"><p>ABC can take over unfinished projects and bring them to completion. Five current jobs are takeovers, a sign that clients trust the company to finish.</p></div>
+          </div>
+          <div class="why-item">
+            <button class="why-toggle" type="button" aria-expanded="false">AAA, end to end <span aria-hidden="true">+</span></button>
+            <div class="why-body"><p>A Category AAA contractor equipped to provide construction solutions, with its own equipment fleet, aluminum formworks, and subsidiary plants.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="capabilities">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Resources</p>
+          <h2>What ABC brings to site</h2>
+        </div>
+        <div class="cap-tabs" role="tablist" aria-label="Capabilities">
+          <button type="button" class="is-active" data-cap="equipment" role="tab" aria-selected="true">Equipment</button>
+          <button type="button" data-cap="formworks" role="tab" aria-selected="false">Aluminum formworks</button>
+          <button type="button" data-cap="archiwall" role="tab" aria-selected="false">Archiwall</button>
+          <button type="button" data-cap="archicast" role="tab" aria-selected="false">Archicast</button>
+          <button type="button" data-cap="quality" role="tab" aria-selected="false">Quality &amp; PCAB</button>
+        </div>
+
+        <div class="cap-panel is-active" data-cap="equipment">
+          <div class="cap-layout">
+            <div class="cap-copy">
+              <h3>Motorpool and tower cranes</h3>
+              <p>Archipelago Builders keeps its own heavy and light equipment. The fleet includes 18 tower cranes. The equipment stockyard and motorpool sit in Angat, Bulacan, so plant can be staged close to Luzon sites.</p>
+            </div>
+            <div class="cap-photos">
+              <button type="button" class="zoomable" data-full="images/deck/formworks.jpeg" data-alt="Aluminum formworks stacked at the Angat, Bulacan yard">
+                <img src="images/deck/formworks.jpeg" alt="Formwork panels stacked at the Angat yard" />
+              </button>
+              <button type="button" class="zoomable" data-full="images/deck/pasig-cityhall.jpeg" data-alt="Tower cranes on the Modern Pasig City Hall site">
+                <img src="images/deck/pasig-cityhall.jpeg" alt="Tower cranes working over a large site in Pasig" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-panel" data-cap="formworks">
+          <div class="cap-layout">
+            <div class="cap-copy">
+              <h3>Aluminum building system</h3>
+              <p>Archipelago Builders was the first to use the aluminum building system in this market. It is an integrated forming and shoring system: lightweight forms for almost any application where monolithic reinforced cast-in-place concrete is specified. The formworks stockyard is in Angat, Bulacan.</p>
+            </div>
+            <div class="cap-photos">
+              <button type="button" class="zoomable" data-full="images/deck/formworks-yard.jpg" data-alt="Formworks stockyard">
+                <img src="images/deck/formworks-yard.jpg" alt="Formworks stockyard" />
+              </button>
+              <button type="button" class="zoomable" data-full="images/deck/formworks.jpeg" data-alt="Stacked aluminum formwork panels">
+                <img src="images/deck/formworks.jpeg" alt="Stacked aluminum formwork panels" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-panel" data-cap="archiwall">
+          <div class="cap-layout">
+            <div class="cap-copy">
+              <h3>Archiwall Corporation</h3>
+              <p>Interior precast wall panels from Kaybitin Road corner C. Diaz St., San Gabriel, Santa Maria, Bulacan. Production is 300 panels in an 8-hour shift. A typical floor of 1,500 square meters is about 1,800 panels, which the plant can finish in a week.</p>
+              <p><a href="mailto:archiwallcorp@gmail.com">archiwallcorp@gmail.com</a></p>
+            </div>
+            <div class="cap-photos">
+              <button type="button" class="zoomable" data-full="images/deck/archiwall-1.jpg" data-alt="Archiwall installed panel sample">
+                <img src="images/deck/archiwall-1.jpg" alt="Archiwall product sample" />
+              </button>
+              <button type="button" class="zoomable" data-full="images/deck/archiwall-2.jpg" data-alt="Archiwall panel sample">
+                <img src="images/deck/archiwall-2.jpg" alt="Archiwall product sample" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-panel" data-cap="archicast">
+          <div class="cap-layout">
+            <div class="cap-copy">
+              <h3>Archicast</h3>
+              <p>Exterior precast from the same Santa Maria plant, prepared so window openings are ready earlier and architectural work on the building can start sooner. Archicast shares the Kaybitin Road address with Archiwall.</p>
+            </div>
+            <div class="cap-photos">
+              <button type="button" class="zoomable" data-full="images/deck/archicast.jpeg" data-alt="Archicast exterior precast sample">
+                <img src="images/deck/archicast.jpeg" alt="Archicast product sample" />
+              </button>
+              <button type="button" class="zoomable" data-full="images/deck/gold-residences.jpg" data-alt="High-rise residential towers">
+                <img src="images/deck/gold-residences.jpg" alt="Residential towers that use modern facade systems" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-panel" data-cap="quality">
+          <div class="cap-layout">
+            <div class="cap-copy">
+              <h3>Quality policy</h3>
+              <p>The management of Archipelago Builders Corporation is dedicated to delivering construction projects that consistently exceed high quality standards across the organization. It does this by giving employees continuous education and training, and by putting customer needs first with professionalism and integrity.</p>
+              <p>PCAB Regular Contractor’s License No. 33942. Category AAA for General Building and General Engineering. Authorized Managing Officer: Engr. John Paul Pe. Validity: 4 September 2025 to 4 September 2027.</p>
+              <button class="btn btn-navy license-btn zoomable" type="button" data-full="images/deck/pcab-license.png" data-alt="PCAB Regular Contractor’s License of Archipelago Builders Corporation">View the PCAB license</button>
+            </div>
+            <div class="cap-photos">
+              <button type="button" class="zoomable" data-full="images/deck/pcab-license.png" data-alt="PCAB license certificate">
+                <img src="images/deck/pcab-license.png" alt="PCAB Regular Contractor’s License" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="organization">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our team</p>
+          <h2>Organization chart</h2>
+          <p class="section-lead">The chart below is the organization chart from the company profile. Choose a leader to see the departments that report through them, or open the chart to zoom and pan.</p>
+        </div>
+        <div class="org-layout">
+          <div class="leader-list" id="leader-list" role="tablist" aria-label="Leaders"></div>
+          <article class="leader-detail info-card" id="leader-detail" aria-live="polite"></article>
+        </div>
+        <figure class="org-figure">
+          <button type="button" class="zoomable" data-full="images/deck/org-chart.jpg" data-alt="Organization chart of Archipelago Builders Corporation">
+            <img src="images/deck/org-chart.jpg" alt="Organization chart showing Engr. John Paul Pe, President and CEO, and the leadership team" />
+          </button>
+          <figcaption>Organization chart from the company profile. Select the image to zoom. Drag the image when it is enlarged.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section services" id="partners">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Group and partners</p>
+          <h2>Companies beside the build</h2>
+        </div>
+        <div class="partner-grid">
+          <article class="partner-card">
+            <h3>White Equipment and Trading Inc.</h3>
+            <p>North Avenue, Bagong Pag-asa, Quezon City. Positioned for construction, infrastructure, industrial, and commercial clients, with efficient and dependable equipment solutions.</p>
+          </article>
+          <article class="partner-card">
+            <h3>Resilient Services Contracting Inc.</h3>
+            <p>North Avenue, Bagong Pag-asa, Quezon City. End-to-end contracting of competent talent for construction and other industries, with a human-centered and customer-oriented approach.</p>
+          </article>
+          <article class="partner-card">
+            <img src="images/deck/partner-nu.jpg" alt="National University Bulldogs men’s volleyball team, UAAP Season 86 champions" />
+            <h3>National University</h3>
+            <p>551 F. Jhocson St., Sampaloc, Manila. NU Bulldogs men’s volleyball, champions of UAAP Season 86. <a href="mailto:info@national-u.edu.ph">info@national-u.edu.ph</a></p>
+          </article>
+          <article class="partner-card">
+            <img src="images/deck/partner-ust.jpg" alt="University of Santo Tomas partnership" />
+            <h3>University of Santo Tomas</h3>
+            <p>España Blvd., Sampaloc, Manila. Archipelago Builders and Archicast sponsor the UST men’s and women’s basketball teams. The company is led by UST civil engineering alumnus Engr. John Paul Pe. <a href="mailto:inquiries@ust.edu.ph">inquiries@ust.edu.ph</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section connect" id="connect">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Connect with us</p>
+          <h2>YouTube and Facebook</h2>
+          <p class="section-lead">Watch the company channel and follow the Facebook page. The addresses below are the official links.</p>
+        </div>
+        <div class="connect-grid">
+          <article class="connect-card">
+            <h3>YouTube</h3>
+            <p>Archipelago Builders Corporation channel — galas, workforce events, and company films.</p>
+            <div class="url-line">
+              <a id="youtube-url" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@archipelagobuilderscorpora5317</a>
+              <button class="copy-btn" type="button" data-copy="https://www.youtube.com/@archipelagobuilderscorpora5317">Copy</button>
+            </div>
+            <div class="video-shell">
+              <iframe id="yt-frame" title="Archipelago Builders Corporation on YouTube" src="https://www.youtube-nocookie.com/embed/lRWIdAVJXkc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-list" id="video-list" role="tablist" aria-label="Channel videos"></div>
+          </article>
+          <article class="connect-card">
+            <h3>Facebook</h3>
+            <p>News and updates from Archipelago Builders Corporation.</p>
+            <div class="url-line">
+              <a id="facebook-url" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">https://www.facebook.com/profile.php?id=100086010290289</a>
+              <button class="copy-btn" type="button" data-copy="https://www.facebook.com/profile.php?id=100086010290289">Copy</button>
+            </div>
+            <div class="fb-frame">
+              <iframe
+                title="Archipelago Builders Corporation on Facebook"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100086010290289&tabs=timeline&width=500&height=480&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-gold" href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Open Facebook</a>
+              <a class="btn btn-ghost" href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">Open YouTube</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -323,76 +475,113 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Contact</p>
-          <h2>Let’s discuss your next project</h2>
-          <p class="section-lead">Reach our Quezon City headquarters — we’re ready to talk scope, schedule, and delivery.</p>
+          <h2>Archipelago Building</h2>
+          <p class="section-lead">29 North Avenue, Bagong Pag-asa, Quezon City.</p>
         </div>
         <div class="contact-layout">
-          <div class="contact-details reveal">
-            <div class="contact-block">
+          <div class="contact-details">
+            <article class="info-card">
               <h3>Office</h3>
-              <p>Archipelago Building<br />29 North Avenue<br />Brgy. Pag-asa, Quezon City</p>
-            </div>
-            <div class="contact-block">
-              <h3>Email</h3>
-              <p><a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
-            </div>
-            <div class="contact-block">
-              <h3>Phone</h3>
-              <p><a href="tel:+63289269056">+63 02 8926-9056</a></p>
-            </div>
-            <div class="contact-block">
-              <h3>Fax</h3>
-              <p>+63 02 8922-4320</p>
-            </div>
+              <p>Archipelago Building<br />29 North Avenue, Bagong Pag-asa<br />Quezon City, Philippines</p>
+            </article>
+            <article class="info-card">
+              <h3>Phone and email</h3>
+              <p><a href="tel:+63289269056">(02) 8926-9056 to 58</a><br />
+              <a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
+            </article>
+            <article class="info-card">
+              <h3>Website</h3>
+              <p><a href="https://www.archipelagobuilderscorporation.com" target="_blank" rel="noopener noreferrer">www.archipelagobuilderscorporation.com</a></p>
+            </article>
           </div>
-          <form class="contact-form reveal" id="contact-form" novalidate>
+          <form class="info-card" id="contact-form" novalidate>
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
+              <span class="error" id="name-error"></span>
             </div>
             <div class="field">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="error" id="email-error"></span>
+            </div>
+            <div class="field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>Project inquiry</option>
+                <option>Takeover / completion</option>
+                <option>Precast and formworks</option>
+                <option>Careers</option>
+                <option>Other</option>
+              </select>
             </div>
             <div class="field">
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error" id="message-error"></span>
             </div>
-            <button class="btn btn-primary" type="submit">Send message</button>
-            <p class="form-note" id="form-note" hidden>Thanks — your mail client will open so you can send the message.</p>
+            <button class="btn btn-navy" type="submit">Send message</button>
+            <p class="form-note" id="form-note" hidden>Your email app will open with this message addressed to abcorpinfo@archipelagobuilders.com.</p>
           </form>
         </div>
-
-        <div class="office-map reveal">
-          <div class="map-head">
-            <h3>Main office map</h3>
-            <a
-              class="map-link"
-              href="https://www.google.com/maps/search/?api=1&query=Archipelago+Building+29+North+Avenue+Brgy.+Pag-asa+Quezon+City"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Open in Google Maps</a>
-          </div>
-          <div class="map-frame">
-            <iframe
-              title="Map of Archipelago Builders Corporation main office at 29 North Avenue, Quezon City"
-              src="https://maps.google.com/maps?q=Archipelago%20Building%2C%2029%20North%20Avenue%2C%20Brgy.%20Pag-asa%2C%20Quezon%20City&z=16&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-          </div>
+        <div class="map-head">
+          <h3>Main office</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=Archipelago+Building+29+North+Avenue+Bagong+Pag-asa+Quezon+City" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+        </div>
+        <div class="map-frame">
+          <iframe title="Map of Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City" src="https://maps.google.com/maps?q=Archipelago%20Building%2C%2029%20North%20Avenue%2C%20Bagong%20Pag-asa%2C%20Quezon%20City&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-brand">Archipelago Builders Corporation</p>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/deck/logo-lockup.jpeg" alt="" />
+          <strong>Archipelago Builders Corporation</strong>
+        </div>
+        <p>Engineers | Contractors. General Contractor — AAA. Beyond Legacy.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <p>Archipelago Building, 29 North Avenue, Bagong Pag-asa, Quezon City<br />
+        <a href="tel:+63289269056">(02) 8926-9056 to 58</a><br />
+        <a href="mailto:abcorpinfo@archipelagobuilders.com">abcorpinfo@archipelagobuilders.com</a></p>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <p><a href="https://www.youtube.com/@archipelagobuilderscorpora5317" target="_blank" rel="noopener noreferrer">YouTube channel</a><br />
+        <a href="https://www.facebook.com/profile.php?id=100086010290289" target="_blank" rel="noopener noreferrer">Facebook page</a></p>
+      </div>
+    </div>
+    <div class="container legal">
       <p>&copy; <span id="year"></span> Archipelago Builders Corporation. All rights reserved.</p>
     </div>
   </footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Back to top">↑</button>
+
+  <dialog class="modal" id="project-modal">
+    <div class="modal-hero" id="modal-hero"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox">
+    <div class="lb-bar">
+      <strong id="lb-title">Image</strong>
+      <div>
+        <button type="button" id="lb-out" aria-label="Zoom out">−</button>
+        <button type="button" id="lb-in" aria-label="Zoom in">+</button>
+        <button type="button" id="lb-reset">Reset</button>
+        <button type="button" id="lb-close">Close</button>
+      </div>
+    </div>
+    <div class="lb-stage" id="lb-stage">
+      <img id="lb-img" alt="" />
+    </div>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>
