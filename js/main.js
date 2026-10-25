@@ -76,19 +76,154 @@ const VIDEOS = [
   { id: "OfLrph5KtCo", title: "Christmas Party 2023 highlights" }
 ];
 
+const ICONS = {
+  people: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  record: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16l3.5-4 3 2.5L20 8"/></svg>',
+  plant: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M4 10h16M12 7v13"/></svg>',
+  takeover: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>',
+  aaa: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.2-7 8.5C7.8 19.2 5 16.2 5 12V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>'
+};
+
+const PIN = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>';
+const MAIL = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>';
+const CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#f7c92f"/><path d="M8 12.2l2.4 2.4L16.2 9" fill="none" stroke="#0d1f4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+const WHY = [
+  {
+    title: "People first",
+    body: "ABC invests in the knowledge, skills, attributes, and experience its people need to build the project in front of them.",
+    stat: "People",
+    caption: "knowledge, skills, and experience on the job",
+    icon: "people"
+  },
+  {
+    title: "A 60-year track record",
+    body: "The record is the proof. Completed work is worth Php 25 billion, from industrial buildings to high-rise condominiums.",
+    stat: "Php 25B",
+    caption: "in completed work over 60 years",
+    count: 25,
+    prefix: "Php ",
+    suffix: "B",
+    icon: "record"
+  },
+  {
+    title: "Own precast plants",
+    body: "Archiwall produces interior wall panels and Archicast produces exterior precast. Both cut build time and cost with ready-to-finish concrete wall systems.",
+    stat: "2",
+    caption: "in-house precast plants: Archiwall and Archicast",
+    count: 2,
+    icon: "plant"
+  },
+  {
+    title: "Takeover specialist",
+    body: "ABC can take over unfinished projects and bring them to completion. Five current jobs are takeovers, a sign that clients trust the company to finish.",
+    stat: "5",
+    caption: "current jobs are takeovers",
+    count: 5,
+    icon: "takeover"
+  },
+  {
+    title: "AAA, end to end",
+    body: "A Category AAA contractor equipped to provide construction solutions, with its own equipment fleet, aluminum formworks, and subsidiary plants.",
+    stat: "AAA",
+    caption: "end to end, with fleet, formworks, and plants",
+    icon: "aaa"
+  }
+];
+
+const PARTNERS = [
+  {
+    name: "White Equipment and Trading Inc.",
+    badge: "Group company",
+    place: "North Avenue, Bagong Pag-asa, Quezon City.",
+    description: "Positioned to serve the construction, infrastructure, industrial, and commercial sectors across the region, with efficient and dependable equipment solutions.",
+    label: "Sectors served",
+    chips: ["Construction", "Infrastructure", "Industrial", "Commercial"],
+    points: ["Efficient, cost-effective, and dependable solutions", "Helps clients achieve their project goals"],
+    logo: "images/partners/white-logo.png",
+    logoAlt: "White Equipment and Trading Inc. logo",
+    photos: [
+      { src: "images/partners/white-jcb.jpg", alt: "JCB excavator at an Archipelago Builders groundbreaking", caption: "JCB excavator at an ABC groundbreaking" },
+      { src: "images/partners/white-crane.jpg", alt: "Tower crane being assembled on site", caption: "Tower crane on site" },
+      { src: "images/partners/white-truck.jpg", alt: "Heavy-haul trailer truck carrying precast panels", caption: "Heavy-haul trailer truck" }
+    ]
+  },
+  {
+    name: "Resilient Services Contracting Inc.",
+    badge: "Group company",
+    place: "North Avenue, Bagong Pag-asa, Quezon City.",
+    description: "End-to-end contracting of competent talent for construction and other industries, delivered with a human-centered and customer-oriented approach.",
+    label: "How they work",
+    chips: ["Compliant", "End-to-end", "Human-centered", "Customer-oriented"],
+    points: ["Provides highly competent talent to construction and other industries", "Develops and provides highly qualified manpower"],
+    logo: "images/partners/resilient-logo.png",
+    logoAlt: "Resilient Services Contracting Inc. logo",
+    photos: [
+      { src: "images/partners/resilient-crew.jpg", alt: "Resilient Services crew in company uniform on site", caption: "Crew in company uniform" },
+      { src: "images/partners/resilient-scaffold.jpg", alt: "Resilient Services crew handling scaffolding on site", caption: "Handling scaffolding on site" }
+    ]
+  },
+  {
+    name: "National University",
+    badge: "University partner",
+    place: "551 F. Jhocson St., Sampaloc, Manila",
+    email: "info@national-u.edu.ph",
+    description: "Home of the NU Bulldogs. The men's volleyball team won the UAAP Season 86 championship and carries the banner of three-peat defending UAAP champions.",
+    label: "Highlights",
+    chips: ["Since 1900", "Men's volleyball", "UAAP Season 86 champions"],
+    points: ["NU Bulldogs men's volleyball, champions of UAAP Season 86", "Three-peat defending UAAP champions"],
+    logo: "images/partners/nu-logo.png",
+    logoAlt: "National University logo",
+    photos: [
+      { src: "images/deck/partner-nu.jpg", alt: "NU Bulldogs celebrating the UAAP Season 86 championship on court", caption: "Bulldogs celebrating the championship on court" },
+      { src: "images/partners/nu-team.jpg", alt: "NU men's volleyball team with the three-peat defending UAAP champions banner", caption: "Men's volleyball team, three-peat defending UAAP champions" }
+    ]
+  },
+  {
+    name: "University of Santo Tomas",
+    badge: "University partner",
+    place: "España Blvd., Sampaloc, Manila",
+    email: "inquiries@ust.edu.ph",
+    description: "Archipelago Builders and Archicast sponsor the UST men's and women's basketball teams. The company is led by UST civil engineering alumnus Engr. John Paul Pe.",
+    label: "Sponsorship",
+    chips: ["Since 1611", "Men's basketball", "Women's basketball"],
+    points: [
+      "Memorandum of agreement signed with the UST Institute of Physical Education and Athletics at the Quadricentennial Pavilion",
+      "Engr. John Paul Pe is a UST alumnus, and his son Paulo previously played for UST basketball"
+    ],
+    logo: "images/partners/ust-logo.png",
+    logoAlt: "University of Santo Tomas seal",
+    photos: [
+      { src: "images/deck/partner-ust.jpg", alt: "Sponsorship signing at the UST Quadricentennial Pavilion", caption: "Sponsorship signing at the UST Quadricentennial Pavilion" }
+    ]
+  }
+];
+
 const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image).map((project) => project.category))];
 
 (() => {
+  document.documentElement.classList.add("js");
+  const canHover = window.matchMedia("(hover: hover)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let viaKeyboard = false;
+  document.addEventListener("keydown", () => { viaKeyboard = true; });
+  document.addEventListener("pointerdown", () => { viaKeyboard = false; });
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  const scrollProgress = document.querySelector("#scroll-progress");
   const onScroll = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
     const top = document.querySelector("#to-top");
     if (top) top.classList.toggle("is-on", window.scrollY > 700);
+    if (scrollProgress) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    }
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -168,12 +303,8 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     });
   });
 
-  document.querySelectorAll(".why-item").forEach((item) => {
-    item.querySelector(".why-toggle")?.addEventListener("click", () => {
-      const open = item.classList.toggle("is-open");
-      item.querySelector(".why-toggle").setAttribute("aria-expanded", open ? "true" : "false");
-    });
-  });
+  initWhy();
+  initPartners();
 
   document.querySelectorAll(".cap-tabs button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -339,6 +470,66 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       </article>`;
   };
 
+  const dots = document.querySelector("#project-dots");
+  const carousel = grid?.closest(".project-carousel");
+  let projectIndex = 0;
+  let gliding = false;
+  let glideTimer = 0;
+  let hoverTimer = 0;
+  let edgeTimer = 0;
+  let autoTimer = 0;
+  let resumeTimer = 0;
+  let pointerInside = false;
+  let projectsInView = true;
+
+  const projectCards = () => (grid ? [...grid.querySelectorAll(".project-card")] : []);
+
+  const paintDots = () => {
+    if (!dots) return;
+    const cards = projectCards();
+    dots.innerHTML = cards.map((_, index) => `
+      <button type="button" role="tab" data-index="${index}" aria-label="Show project ${index + 1}" aria-selected="${index === projectIndex ? "true" : "false"}" class="${index === projectIndex ? "is-on" : ""}"></button>
+    `).join("");
+  };
+
+  const centerOn = (index, behavior = "smooth") => {
+    const cards = projectCards();
+    if (!grid || !cards.length) return;
+    projectIndex = (index + cards.length) % cards.length;
+    const card = cards[projectIndex];
+    cards.forEach((item, itemIndex) => item.classList.toggle("is-center", itemIndex === projectIndex));
+    paintDots();
+    const motion = reduceMotion || behavior === "auto" ? "auto" : "smooth";
+    const gridRect = grid.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const delta = (cardRect.left + cardRect.width / 2) - (gridRect.left + gridRect.width / 2);
+    gliding = true;
+    if (Math.abs(delta) > 1) grid.scrollBy({ left: delta, behavior: motion });
+    clearTimeout(glideTimer);
+    glideTimer = window.setTimeout(() => { gliding = false; }, motion === "smooth" ? 680 : 80);
+  };
+
+  const scheduleAuto = () => {
+    clearTimeout(autoTimer);
+    if (reduceMotion || pointerInside || !projectsInView) return;
+    autoTimer = window.setTimeout(() => {
+      if (pointerInside || !projectsInView) return;
+      const total = projectCards().length;
+      if (total < 2) return;
+      centerOn(projectIndex + 1);
+      scheduleAuto();
+    }, 3200);
+  };
+
+  const holdAuto = () => {
+    clearTimeout(autoTimer);
+    clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(() => {
+      if (pointerInside) return;
+      scheduleAuto();
+    }, 3200);
+  };
+
   const renderProjects = () => {
     const list = filtered();
     grid.innerHTML = list.map(cardHtml).join("");
@@ -346,20 +537,113 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     count.textContent = `${list.length} project${list.length === 1 ? "" : "s"}`;
     requestAnimationFrame(() => {
       grid.querySelectorAll(".meter").forEach((meter) => meter.classList.add("is-ready"));
+      centerOn(0, "auto");
+      scheduleAuto();
     });
     grid.querySelectorAll(".project-open").forEach((button) => {
       button.addEventListener("click", () => openProject(button.dataset.id));
     });
-    grid.scrollTo({ left: 0 });
   };
 
-  const scrollProjects = (direction) => {
-    const card = grid.querySelector(".project-card");
-    const distance = card ? card.getBoundingClientRect().width + 14 : 340;
-    grid.scrollBy({ left: direction * distance, behavior: "smooth" });
-  };
-  document.querySelector("#project-prev")?.addEventListener("click", () => scrollProjects(-1));
-  document.querySelector("#project-next")?.addEventListener("click", () => scrollProjects(1));
+  if (grid && carousel) {
+    grid.addEventListener("pointerover", (event) => {
+      if (!canHover || gliding) return;
+      const card = event.target.closest(".project-card");
+      if (!card) return;
+      clearTimeout(hoverTimer);
+      hoverTimer = window.setTimeout(() => {
+        if (gliding) return;
+        const index = projectCards().indexOf(card);
+        if (index >= 0 && index !== projectIndex) centerOn(index);
+      }, 120);
+    });
+
+    carousel.addEventListener("pointerenter", () => {
+      pointerInside = true;
+      clearTimeout(autoTimer);
+    });
+    carousel.addEventListener("pointerleave", () => {
+      pointerInside = false;
+      clearTimeout(hoverTimer);
+      clearTimeout(edgeTimer);
+      if (!gliding) centerOn(projectIndex, "auto");
+      scheduleAuto();
+    });
+
+    let edgeDir = 0;
+    const armEdge = (direction) => {
+      if (!canHover) return;
+      edgeDir = direction;
+      clearTimeout(edgeTimer);
+      edgeTimer = window.setTimeout(() => {
+        if (edgeDir !== direction || gliding) return;
+        centerOn(projectIndex + direction);
+        armEdge(direction);
+      }, 700);
+    };
+    const stopEdge = () => {
+      edgeDir = 0;
+      clearTimeout(edgeTimer);
+    };
+    document.querySelector("#project-prev")?.addEventListener("pointerenter", () => armEdge(-1));
+    document.querySelector("#project-next")?.addEventListener("pointerenter", () => armEdge(1));
+    document.querySelector("#project-prev")?.addEventListener("pointerleave", stopEdge);
+    document.querySelector("#project-next")?.addEventListener("pointerleave", stopEdge);
+    document.querySelector("#project-prev")?.addEventListener("click", () => {
+      stopEdge();
+      centerOn(projectIndex - 1);
+      holdAuto();
+    });
+    document.querySelector("#project-next")?.addEventListener("click", () => {
+      stopEdge();
+      centerOn(projectIndex + 1);
+      holdAuto();
+    });
+
+    let scrollTimer = 0;
+    grid.addEventListener("scroll", () => {
+      if (canHover || gliding) return;
+      clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => {
+        const cards = projectCards();
+        const mid = grid.scrollLeft + grid.clientWidth / 2;
+        let best = 0;
+        let bestDist = Infinity;
+        cards.forEach((card, index) => {
+          const dist = Math.abs(card.offsetLeft + card.offsetWidth / 2 - mid);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = index;
+          }
+        });
+        centerOn(best);
+        holdAuto();
+      }, 140);
+    }, { passive: true });
+
+    dots?.addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (!button) return;
+      centerOn(Number(button.dataset.index));
+      holdAuto();
+    });
+
+    grid.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      event.preventDefault();
+      centerOn(projectIndex + (event.key === "ArrowRight" ? 1 : -1));
+      holdAuto();
+    });
+
+    if ("IntersectionObserver" in window) {
+      const watch = new IntersectionObserver((entries) => {
+        projectsInView = entries.some((entry) => entry.isIntersecting);
+        if (projectsInView && !pointerInside) scheduleAuto();
+        else clearTimeout(autoTimer);
+      }, { threshold: 0.3 });
+      watch.observe(carousel);
+    }
+  }
 
   const dash = document.querySelector("#progress-dash");
   const ongoingTop = PROJECTS.filter((project) => project.status === "ongoing" && project.poc != null)
@@ -632,6 +916,357 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     revealTargets.forEach((el) => observer.observe(el));
   } else {
     revealTargets.forEach(animateCounters);
+  }
+
+  function revealOnScroll(nodes, gap) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      nodes.forEach((node) => node.classList.add("is-in", "is-settled"));
+      return;
+    }
+    const entrance = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const node = entry.target;
+        const index = Number(node.dataset.index || 0);
+        node.classList.add("is-in");
+        window.setTimeout(() => node.classList.add("is-settled"), 520 + index * gap);
+        entrance.unobserve(node);
+      });
+    }, { threshold: 0.18 });
+    nodes.forEach((node) => entrance.observe(node));
+  }
+
+  function initWhy() {
+    const list = document.querySelector("#why-cards");
+    const stageIcon = document.querySelector("#why-stage-icon");
+    const stat = document.querySelector("#why-stat");
+    const caption = document.querySelector("#why-caption");
+    const live = document.querySelector("#why-live");
+    const ticksWrap = document.querySelector("#why-ticks");
+    if (!list || !ticksWrap || !stat) return;
+
+    list.innerHTML = WHY.map((item, index) => `
+      <article class="why-card" data-index="${index}" style="--d:${index}">
+        <h3>
+          <button class="why-toggle" type="button" id="why-btn-${index}" aria-expanded="false" aria-controls="why-panel-${index}">
+            <span class="why-ico" aria-hidden="true">${ICONS[item.icon]}</span>
+            <span class="why-title">${item.title}</span>
+            <span class="why-plus" aria-hidden="true"><span></span><span></span></span>
+          </button>
+        </h3>
+        <div class="why-panel" id="why-panel-${index}" role="region" aria-labelledby="why-btn-${index}" aria-hidden="true">
+          <div class="why-panel-inner"><p>${item.body}</p></div>
+        </div>
+      </article>`).join("");
+
+    ticksWrap.innerHTML = WHY.map((item) => `<button class="why-tick" type="button" aria-label="${item.title}"></button>`).join("");
+
+    const cards = [...list.querySelectorAll(".why-card")];
+    const ticks = [...ticksWrap.querySelectorAll(".why-tick")];
+    let open = -1;
+    let stage = 0;
+    let statTimer = 0;
+    let countToken = 0;
+    let hoverTimer = 0;
+    let lockUntil = 0;
+
+    const countUp = (item) => {
+      const token = ++countToken;
+      if (item.count == null || reduceMotion) {
+        stat.textContent = item.stat;
+        return;
+      }
+      const start = performance.now();
+      const frame = (now) => {
+        if (token !== countToken) return;
+        const progress = Math.min(1, (now - start) / 900);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        stat.textContent = `${item.prefix || ""}${Math.round(item.count * eased)}${item.suffix || ""}`;
+        if (progress < 1) requestAnimationFrame(frame);
+        else stat.textContent = item.stat;
+      };
+      requestAnimationFrame(frame);
+    };
+
+    const markTicks = (index) => {
+      ticks.forEach((tick, tickIndex) => {
+        tick.classList.toggle("is-on", index >= 0 && tickIndex <= index);
+        if (tickIndex === index) tick.setAttribute("aria-current", "true");
+        else tick.removeAttribute("aria-current");
+      });
+    };
+
+    const showStage = (index) => {
+      const item = WHY[index];
+      stage = index;
+      markTicks(index);
+      clearTimeout(statTimer);
+      const commit = () => {
+        stageIcon.innerHTML = ICONS[item.icon];
+        caption.textContent = item.caption;
+        live.textContent = `${item.stat}. ${item.caption}`;
+        countUp(item);
+        requestAnimationFrame(() => {
+          stat.classList.remove("is-out");
+          caption.classList.remove("is-out");
+        });
+      };
+      if (reduceMotion) {
+        stat.classList.remove("is-out");
+        caption.classList.remove("is-out");
+        commit();
+        return;
+      }
+      stat.classList.add("is-out");
+      caption.classList.add("is-out");
+      statTimer = window.setTimeout(commit, 220);
+    };
+
+    const setOpen = (index) => {
+      open = index;
+      list.classList.toggle("is-engaged", index >= 0);
+      cards.forEach((card, cardIndex) => {
+        const on = cardIndex === index;
+        card.classList.toggle("is-open", on);
+        card.querySelector(".why-toggle").setAttribute("aria-expanded", on ? "true" : "false");
+        card.querySelector(".why-panel").setAttribute("aria-hidden", on ? "false" : "true");
+      });
+      if (index >= 0 && index !== stage) showStage(index);
+      else if (index >= 0) live.textContent = `${WHY[index].stat}. ${WHY[index].caption}`;
+    };
+
+    cards.forEach((card, index) => {
+      const button = card.querySelector(".why-toggle");
+      card.addEventListener("pointerenter", () => {
+        if (!canHover) return;
+        clearTimeout(hoverTimer);
+        hoverTimer = window.setTimeout(() => {
+          setOpen(index);
+          card.dataset.hoverOpen = "1";
+        }, 110);
+      });
+      card.addEventListener("pointerleave", () => {
+        clearTimeout(hoverTimer);
+        delete card.dataset.hoverOpen;
+      });
+      button.addEventListener("click", () => {
+        clearTimeout(hoverTimer);
+        const fromHover = card.dataset.hoverOpen === "1";
+        delete card.dataset.hoverOpen;
+        if (open === index && !fromHover) setOpen(-1);
+        else setOpen(index);
+      });
+      button.addEventListener("focus", () => {
+        if (viaKeyboard) setOpen(index);
+      });
+    });
+
+    ticks.forEach((tick, index) => {
+      tick.addEventListener("click", () => {
+        setOpen(index);
+        lockUntil = performance.now() + 900;
+        cards[index].scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      });
+    });
+
+    if (!canHover) {
+      let ticking = false;
+      const syncCenter = () => {
+        if (performance.now() < lockUntil) return;
+        const mid = window.innerHeight / 2;
+        let best = -1;
+        let bestDist = Infinity;
+        cards.forEach((card, index) => {
+          const rect = card.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const dist = Math.abs((rect.top + rect.bottom) / 2 - mid);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = index;
+          }
+        });
+        if (best >= 0 && best !== open) setOpen(best);
+      };
+      window.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          syncCenter();
+        });
+      }, { passive: true });
+    }
+
+    stageIcon.innerHTML = ICONS[WHY[0].icon];
+    stat.textContent = WHY[0].stat;
+    caption.textContent = WHY[0].caption;
+    markTicks(0);
+    revealOnScroll(cards, 90);
+  }
+
+  function initPartners() {
+    const board = document.querySelector("#partner-board");
+    if (!board) return;
+    board.innerHTML = PARTNERS.map((partner, index) => {
+      const slides = partner.photos.map((photo, photoIndex) => `
+        <div class="pg-slide${photoIndex === 0 ? " is-on" : ""}">
+          <img src="${photo.src}" alt="${photo.alt}" />
+        </div>`).join("");
+      const thumbs = partner.photos.length > 1 ? `
+        <div class="pg-thumbs">
+          ${partner.photos.map((photo, photoIndex) => `
+            <button type="button" class="${photoIndex === 0 ? "is-on" : ""}" aria-label="Show photo: ${photo.caption}"${photoIndex === 0 ? ' aria-current="true"' : ""}>
+              <img src="${photo.src}" alt="" />
+            </button>`).join("")}
+        </div>
+        <div class="pg-progress" aria-hidden="true"><i></i></div>` : "";
+      const email = partner.email ? `<p class="partner-meta"><span class="meta-ico">${MAIL}</span><a href="mailto:${partner.email}">${partner.email}</a></p>` : "";
+      return `
+        <article class="partner-tile${partner.photos.length < 2 ? " is-single" : ""}" data-index="${index}" style="--d:${index}">
+          <div class="partner-media">
+            ${slides}
+            <span class="partner-badge">${partner.badge}</span>
+            <p class="pg-caption">${partner.photos[0].caption}</p>
+            ${thumbs}
+          </div>
+          <img class="partner-logo" src="${partner.logo}" alt="${partner.logoAlt}" />
+          <div class="partner-copy">
+            <h3>${partner.name}</h3>
+            <p class="partner-meta"><span class="meta-ico">${PIN}</span><span>${partner.place}</span></p>
+            ${email}
+            <p class="partner-desc">${partner.description}</p>
+            <p class="partner-kicker">${partner.label}</p>
+            <ul class="partner-chips">${partner.chips.map((chip) => `<li>${chip}</li>`).join("")}</ul>
+            <ul class="partner-points">${partner.points.map((point) => `<li>${CHECK}<span>${point}</span></li>`).join("")}</ul>
+          </div>
+        </article>`;
+    }).join("");
+
+    const tiles = [...board.querySelectorAll(".partner-tile")];
+    let hot = -1;
+
+    const setHot = (index) => {
+      hot = index;
+      board.classList.toggle("is-engaged", index >= 0);
+      tiles.forEach((tile, tileIndex) => {
+        const on = tileIndex === index;
+        tile.classList.toggle("is-hot", on);
+        if (on) tile._play();
+        else tile._stop();
+      });
+    };
+
+    tiles.forEach((tile, index) => {
+      const partner = PARTNERS[index];
+      const single = partner.photos.length < 2;
+      const slideEls = [...tile.querySelectorAll(".pg-slide")];
+      const thumbEls = [...tile.querySelectorAll(".pg-thumbs button")];
+      const caption = tile.querySelector(".pg-caption");
+      const bar = tile.querySelector(".pg-progress i");
+      let photo = 0;
+      let playing = false;
+      let timer = 0;
+      let capTimer = 0;
+
+      const restartBar = () => {
+        if (!bar) return;
+        bar.style.animation = "none";
+        void bar.offsetWidth;
+        bar.style.animation = "";
+      };
+      const restartKen = () => {
+        const img = slideEls[photo]?.querySelector("img");
+        if (!img || reduceMotion) return;
+        img.style.animation = "none";
+        void img.offsetWidth;
+        img.style.animation = "";
+      };
+      const queue = () => {
+        clearTimeout(timer);
+        if (!playing || single) return;
+        timer = window.setTimeout(() => show((photo + 1) % partner.photos.length), 3200);
+      };
+      const show = (next) => {
+        photo = next;
+        slideEls.forEach((slide, slideIndex) => slide.classList.toggle("is-on", slideIndex === next));
+        thumbEls.forEach((thumb, thumbIndex) => {
+          const on = thumbIndex === next;
+          thumb.classList.toggle("is-on", on);
+          if (on) thumb.setAttribute("aria-current", "true");
+          else thumb.removeAttribute("aria-current");
+        });
+        clearTimeout(capTimer);
+        if (reduceMotion) caption.textContent = partner.photos[next].caption;
+        else {
+          caption.classList.add("is-out");
+          capTimer = window.setTimeout(() => {
+            caption.textContent = partner.photos[next].caption;
+            caption.classList.remove("is-out");
+          }, 160);
+        }
+        if (playing) {
+          restartBar();
+          restartKen();
+          queue();
+        }
+      };
+
+      tile._play = () => {
+        if (single || reduceMotion || playing) return;
+        playing = true;
+        tile.classList.add("is-playing");
+        restartBar();
+        restartKen();
+        queue();
+      };
+      tile._stop = () => {
+        playing = false;
+        clearTimeout(timer);
+        tile.classList.remove("is-playing");
+      };
+
+      thumbEls.forEach((thumb, thumbIndex) => {
+        const jump = () => {
+          if (canHover && !playing && !reduceMotion && !single) {
+            playing = true;
+            tile.classList.add("is-playing");
+          }
+          show(thumbIndex);
+        };
+        thumb.addEventListener("pointerenter", () => { if (canHover) jump(); });
+        thumb.addEventListener("click", jump);
+      });
+
+      if (canHover) {
+        tile.addEventListener("pointerenter", () => setHot(index));
+        tile.addEventListener("pointerleave", (event) => {
+          if (!tile.contains(event.relatedTarget) && hot === index) setHot(-1);
+        });
+      }
+      tile.addEventListener("focusin", () => setHot(index));
+      tile.addEventListener("focusout", (event) => {
+        if (!tile.contains(event.relatedTarget) && hot === index) setHot(-1);
+      });
+    });
+
+    revealOnScroll(tiles, 140);
+
+    if (!canHover && "IntersectionObserver" in window) {
+      const ratios = new Map();
+      const watch = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => ratios.set(entry.target, entry.intersectionRatio));
+        let best = null;
+        let bestRatio = 0.55;
+        ratios.forEach((ratio, tile) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            best = tile;
+          }
+        });
+        setHot(best ? Number(best.dataset.index) : -1);
+      }, { threshold: [0, 0.25, 0.55, 0.75, 1] });
+      tiles.forEach((tile) => watch.observe(tile));
+    }
   }
 
   renderProjects();

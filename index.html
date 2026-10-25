@@ -8,10 +8,11 @@
   <link rel="icon" href="images/headerlogo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
   <a class="skip-link" href="#about">Skip to content</a>
 
   <header class="site-header" id="top">
@@ -281,39 +282,26 @@
           <div class="project-grid" id="project-grid" tabindex="0" aria-label="Project cards"></div>
           <button class="carousel-btn" type="button" id="project-next" aria-label="Next projects">›</button>
         </div>
+        <div class="project-dots" id="project-dots" role="tablist" aria-label="Project position"></div>
         <p class="empty" id="project-empty" hidden>No projects match that search. Try another city, developer, or category.</p>
       </div>
     </section>
 
-    <section class="section" id="why">
-      <div class="container split">
-        <div>
+    <section class="section why-section" id="why">
+      <div class="container why-layout">
+        <div class="why-sticky">
           <p class="eyebrow">Why build with ABC</p>
           <h2 class="panel-title">Clients come back</h2>
           <p class="section-lead">Sixty years of solutions, in-house precast, and a record of finishing work others started.</p>
-        </div>
-        <div class="why-list" id="why-list">
-          <div class="why-item is-open">
-            <button class="why-toggle" type="button" aria-expanded="true">People first <span aria-hidden="true">+</span></button>
-            <div class="why-body"><p>ABC invests in the knowledge, skills, attributes, and experience its people need to build the project in front of them.</p></div>
-          </div>
-          <div class="why-item">
-            <button class="why-toggle" type="button" aria-expanded="false">A 60-year track record <span aria-hidden="true">+</span></button>
-            <div class="why-body"><p>The record is the proof. Completed work is worth Php 25 billion, from industrial buildings to high-rise condominiums.</p></div>
-          </div>
-          <div class="why-item">
-            <button class="why-toggle" type="button" aria-expanded="false">Own precast plants <span aria-hidden="true">+</span></button>
-            <div class="why-body"><p>Archiwall produces interior wall panels and Archicast produces exterior precast. Both cut build time and cost with ready-to-finish concrete wall systems.</p></div>
-          </div>
-          <div class="why-item">
-            <button class="why-toggle" type="button" aria-expanded="false">Takeover specialist <span aria-hidden="true">+</span></button>
-            <div class="why-body"><p>ABC can take over unfinished projects and bring them to completion. Five current jobs are takeovers, a sign that clients trust the company to finish.</p></div>
-          </div>
-          <div class="why-item">
-            <button class="why-toggle" type="button" aria-expanded="false">AAA, end to end <span aria-hidden="true">+</span></button>
-            <div class="why-body"><p>A Category AAA contractor equipped to provide construction solutions, with its own equipment fleet, aluminum formworks, and subsidiary plants.</p></div>
+          <div class="why-stage" aria-live="polite">
+            <div class="why-stage-ico" id="why-stage-icon" aria-hidden="true"></div>
+            <p class="why-stat" id="why-stat" aria-hidden="true">People</p>
+            <p class="why-caption" id="why-caption" aria-hidden="true">knowledge, skills, and experience on the job</p>
+            <div class="why-ticks" id="why-ticks" role="group" aria-label="Choose a reason"></div>
+            <p class="sr-only" id="why-live"></p>
           </div>
         </div>
+        <div class="why-cards" id="why-cards"></div>
       </div>
     </section>
 
@@ -430,32 +418,14 @@
       </div>
     </section>
 
-    <section class="section services" id="partners">
+    <section class="section partners-section" id="partners">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Group and partners</p>
           <h2>Companies beside the build</h2>
+          <p class="section-lead">Our group companies and university partners, working beside every build.</p>
         </div>
-        <div class="partner-grid">
-          <article class="partner-card">
-            <h3>White Equipment and Trading Inc.</h3>
-            <p>North Avenue, Bagong Pag-asa, Quezon City. Positioned for construction, infrastructure, industrial, and commercial clients, with efficient and dependable equipment solutions.</p>
-          </article>
-          <article class="partner-card">
-            <h3>Resilient Services Contracting Inc.</h3>
-            <p>North Avenue, Bagong Pag-asa, Quezon City. End-to-end contracting of competent talent for construction and other industries, with a human-centered and customer-oriented approach.</p>
-          </article>
-          <article class="partner-card">
-            <img src="images/deck/partner-nu.jpg" alt="National University Bulldogs men’s volleyball team, UAAP Season 86 champions" />
-            <h3>National University</h3>
-            <p>551 F. Jhocson St., Sampaloc, Manila. NU Bulldogs men’s volleyball, champions of UAAP Season 86. <a href="mailto:info@national-u.edu.ph">info@national-u.edu.ph</a></p>
-          </article>
-          <article class="partner-card">
-            <img src="images/deck/partner-ust.jpg" alt="University of Santo Tomas partnership" />
-            <h3>University of Santo Tomas</h3>
-            <p>España Blvd., Sampaloc, Manila. Archipelago Builders and Archicast sponsor the UST men’s and women’s basketball teams. The company is led by UST civil engineering alumnus Engr. John Paul Pe. <a href="mailto:inquiries@ust.edu.ph">inquiries@ust.edu.ph</a></p>
-          </article>
-        </div>
+        <div class="partner-board" id="partner-board"></div>
       </div>
     </section>
 
