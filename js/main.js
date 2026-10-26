@@ -216,17 +216,45 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
   if (year) year.textContent = String(new Date().getFullYear());
 
   const scrollProgress = document.querySelector("#scroll-progress");
+  const toTop = document.querySelector("#to-top");
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const navLinks = [...(nav?.querySelectorAll("a[href^='#']") || [])];
+  let sectionMarks = [];
+  const measureSections = () => {
+    sectionMarks = sections.map((section) => ({ id: section.id, top: section.offsetTop }));
+  };
   const onScroll = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
-    const top = document.querySelector("#to-top");
-    if (top) top.classList.toggle("is-on", window.scrollY > 700);
+    if (toTop) toTop.classList.toggle("is-on", window.scrollY > 700);
     if (scrollProgress) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       scrollProgress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
     }
+    const mark = window.scrollY + 120;
+    let current = sectionMarks[0]?.id;
+    sectionMarks.forEach((section) => {
+      if (section.top <= mark) current = section.id;
+    });
+    navLinks.forEach((link) => {
+      const on = link.getAttribute("href") === `#${current}`;
+      if (on) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
   };
+  let scrollScheduled = false;
+  const scheduleScroll = () => {
+    if (scrollScheduled) return;
+    scrollScheduled = true;
+    requestAnimationFrame(() => {
+      scrollScheduled = false;
+      onScroll();
+    });
+  };
+  measureSections();
   onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", scheduleScroll, { passive: true });
+  window.addEventListener("resize", () => { measureSections(); onScroll(); });
+  window.addEventListener("load", () => { measureSections(); onScroll(); });
 
   document.querySelector("#to-top")?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -246,23 +274,6 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       });
     });
   }
-
-  const sections = [...document.querySelectorAll("main section[id]")];
-  const navLinks = [...nav.querySelectorAll("a[href^='#']")];
-  const spy = () => {
-    const mark = window.scrollY + 120;
-    let current = sections[0]?.id;
-    sections.forEach((section) => {
-      if (section.offsetTop <= mark) current = section.id;
-    });
-    navLinks.forEach((link) => {
-      const on = link.getAttribute("href") === `#${current}`;
-      if (on) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
-    });
-  };
-  window.addEventListener("scroll", spy, { passive: true });
-  spy();
 
   document.querySelectorAll(".timeline button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -324,7 +335,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
   let openLeader = -1;
   const leaderCard = (leader, index) => `
     <button class="org-card${leader.ceo ? " is-ceo" : ""}" type="button" data-leader="${index}" aria-expanded="false">
-      <img src="${leader.photo}" alt="" />
+      <img src="${leader.photo}" alt="" loading="lazy" decoding="async" />
       <strong>${leader.name}</strong>
       <span>${leader.role}</span>
       <em class="org-pill">View details</em>
@@ -362,7 +373,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       orgPanel.hidden = false;
       orgPanel.innerHTML = `
         <div class="org-panel-head">
-          <img src="${leader.photo}" alt="" />
+          <img src="${leader.photo}" alt="" loading="lazy" decoding="async" />
           <div>
             <h3>${leader.name}</h3>
             <p>${leader.role}</p>
@@ -446,9 +457,9 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     return list;
   };
 
-  const cardHtml = (project) => {
+  const cardHtml = (project, index = 0) => {
     const visual = project.image
-      ? `<img src="${project.image}" alt="" />`
+      ? `<img src="${project.image}" alt="" decoding="async"${index > 1 ? " loading=\"lazy\"" : ""} />`
       : "";
     const progress = project.status === "ongoing"
       ? `<div class="meter" style="--w:${project.poc || 0}%"><span></span></div><p>${project.pocLabel || `${project.poc}% complete`}</p>`
@@ -667,7 +678,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     const hero = document.querySelector("#modal-hero");
     const body = document.querySelector("#modal-body");
     hero.innerHTML = `
-      ${project.image ? `<img src="${project.image}" alt="" />` : ""}
+      ${project.image ? `<img src="${project.image}" alt="" decoding="async" />` : ""}
       <button class="modal-close" type="button" data-close>Close</button>`;
     const rows = [
       ["Status", project.status === "ongoing" ? (project.pocLabel || `${project.poc}% complete`) : "Completed"],
@@ -712,13 +723,23 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     const frames = heroSlides.map((project, index) => {
       const img = document.createElement("img");
       img.className = "hero-slide" + (index === 0 ? " is-active" : "");
-      img.src = project.image;
       img.alt = "";
       img.decoding = "async";
-      if (index === 0) img.setAttribute("fetchpriority", "high");
+      if (index === 0) {
+        img.src = project.image;
+        img.setAttribute("fetchpriority", "high");
+      } else {
+        img.dataset.src = project.image;
+      }
       heroMedia.insertBefore(img, spot || sheen);
       return img;
     });
+    const armSlide = (index) => {
+      const frame = frames[index];
+      if (!frame?.dataset.src) return;
+      frame.src = frame.dataset.src;
+      delete frame.dataset.src;
+    };
     heroDots.innerHTML = heroSlides.map((project, index) => `
       <button type="button" class="hero-dot${index === 0 ? " is-active" : ""}" role="tab" aria-label="${project.name}" aria-selected="${index === 0 ? "true" : "false"}"></button>`).join("");
     const dots = [...heroDots.querySelectorAll(".hero-dot")];
@@ -726,6 +747,8 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     let heroTimer = 0;
     const showHero = (index, sweep) => {
       heroIndex = (index + heroSlides.length) % heroSlides.length;
+      armSlide(heroIndex);
+      armSlide((heroIndex + 1) % heroSlides.length);
       const project = heroSlides[heroIndex];
       frames.forEach((frame, frameIndex) => frame.classList.toggle("is-active", frameIndex === heroIndex));
       dots.forEach((dot, dotIndex) => {
@@ -767,6 +790,16 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       if (document.hidden) window.clearInterval(heroTimer);
       else queueHero();
     });
+    const heroRoot = heroMedia.closest(".hero");
+    if (heroRoot && "IntersectionObserver" in window) {
+      const heroWatch = new IntersectionObserver(([entry]) => {
+        const visible = entry.isIntersecting;
+        heroRoot.classList.toggle("is-paused", !visible);
+        if (visible) queueHero();
+        else window.clearInterval(heroTimer);
+      }, { rootMargin: "120px" });
+      heroWatch.observe(heroRoot);
+    }
   }
 
   const lightbox = document.querySelector("#lightbox");
@@ -777,7 +810,20 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
   let panX = 0;
   let panY = 0;
 
+  const isDocView = () => lightbox.classList.contains("is-doc");
   const applyTransform = () => {
+    if (isDocView()) {
+      lbImg.style.transform = "none";
+      lbImg.style.width = scale === 1 ? "100%" : `${scale * 100}%`;
+      lbImg.style.maxWidth = scale === 1 ? "100%" : "none";
+      lbImg.style.maxHeight = "none";
+      lbImg.style.height = "auto";
+      return;
+    }
+    lbImg.style.width = "";
+    lbImg.style.maxWidth = "";
+    lbImg.style.maxHeight = "";
+    lbImg.style.height = "";
     lbImg.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
   };
   const resetZoom = () => {
@@ -786,20 +832,23 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     panY = 0;
     applyTransform();
   };
-  const openLightbox = (src, alt) => {
+  const openLightbox = (src, alt, mode) => {
+    lightbox.classList.toggle("is-doc", mode === "document");
     lbImg.src = src;
     lbImg.alt = alt || "";
     lbTitle.textContent = alt || "Image";
     resetZoom();
     lightbox.showModal();
+    if (lbStage) lbStage.scrollTop = 0;
   };
   document.querySelectorAll(".zoomable").forEach((button) => {
-    button.addEventListener("click", () => openLightbox(button.dataset.full, button.dataset.alt));
+    button.addEventListener("click", () => openLightbox(button.dataset.full, button.dataset.alt, button.dataset.view));
   });
   document.querySelector("#lb-in")?.addEventListener("click", () => { scale = Math.min(scale + 0.35, 4); applyTransform(); });
   document.querySelector("#lb-out")?.addEventListener("click", () => { scale = Math.max(scale - 0.35, 1); if (scale === 1) { panX = 0; panY = 0; } applyTransform(); });
   document.querySelector("#lb-reset")?.addEventListener("click", resetZoom);
   document.querySelector("#lb-close")?.addEventListener("click", () => lightbox.close());
+  lightbox?.addEventListener("close", () => lightbox.classList.remove("is-doc"));
   lightbox?.addEventListener("click", (event) => { if (event.target === lightbox) lightbox.close(); });
 
   let dragging = false;
@@ -808,7 +857,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
   let originX = 0;
   let originY = 0;
   lbStage?.addEventListener("pointerdown", (event) => {
-    if (scale <= 1) return;
+    if (isDocView() || scale <= 1) return;
     dragging = true;
     startX = event.clientX;
     startY = event.clientY;
@@ -824,7 +873,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
   });
   lbStage?.addEventListener("pointerup", () => { dragging = false; });
   lbStage?.addEventListener("wheel", (event) => {
-    if (!lightbox.open) return;
+    if (!lightbox.open || isDocView()) return;
     event.preventDefault();
     scale = Math.min(4, Math.max(1, scale + (event.deltaY < 0 ? 0.15 : -0.15)));
     if (scale === 1) { panX = 0; panY = 0; }
@@ -1110,13 +1159,13 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     board.innerHTML = PARTNERS.map((partner, index) => {
       const slides = partner.photos.map((photo, photoIndex) => `
         <div class="pg-slide${photoIndex === 0 ? " is-on" : ""}">
-          <img src="${photo.src}" alt="${photo.alt}" />
+          <img src="${photo.src}" alt="${photo.alt}" loading="lazy" decoding="async" />
         </div>`).join("");
       const thumbs = partner.photos.length > 1 ? `
         <div class="pg-thumbs">
           ${partner.photos.map((photo, photoIndex) => `
             <button type="button" class="${photoIndex === 0 ? "is-on" : ""}" aria-label="Show photo: ${photo.caption}"${photoIndex === 0 ? ' aria-current="true"' : ""}>
-              <img src="${photo.src}" alt="" />
+              <img src="${photo.src}" alt="" loading="lazy" decoding="async" />
             </button>`).join("")}
         </div>
         <div class="pg-progress" aria-hidden="true"><i></i></div>` : "";
@@ -1129,7 +1178,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
             <p class="pg-caption">${partner.photos[0].caption}</p>
             ${thumbs}
           </div>
-          <img class="partner-logo" src="${partner.logo}" alt="${partner.logoAlt}" />
+          <img class="partner-logo" src="${partner.logo}" alt="${partner.logoAlt}" loading="lazy" decoding="async" />
           <div class="partner-copy">
             <h3>${partner.name}</h3>
             <p class="partner-meta"><span class="meta-ico">${PIN}</span><span>${partner.place}</span></p>
@@ -1146,6 +1195,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     let hot = -1;
 
     const setHot = (index) => {
+      if (index === hot) return;
       hot = index;
       board.classList.toggle("is-engaged", index >= 0);
       tiles.forEach((tile, tileIndex) => {
@@ -1253,8 +1303,9 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
 
     if (!canHover && "IntersectionObserver" in window) {
       const ratios = new Map();
+      let active = -1;
       const watch = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => ratios.set(entry.target, entry.intersectionRatio));
+        entries.forEach((entry) => ratios.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0));
         let best = null;
         let bestRatio = 0.55;
         ratios.forEach((ratio, tile) => {
@@ -1263,8 +1314,11 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
             best = tile;
           }
         });
-        setHot(best ? Number(best.dataset.index) : -1);
-      }, { threshold: [0, 0.25, 0.55, 0.75, 1] });
+        const next = best ? Number(best.dataset.index) : -1;
+        if (next === active) return;
+        active = next;
+        setHot(next);
+      }, { threshold: [0.55] });
       tiles.forEach((tile) => watch.observe(tile));
     }
   }
