@@ -1,17 +1,17 @@
 const PROJECTS = [
   { id: "gold-phase-2", name: "Gold Residences – Phase 2", status: "ongoing", category: "High-Rise", place: "Ninoy Aquino Avenue, Parañaque City", developer: "SM Development Corporation", amount: "₱1,065,000,000.00", scope: "Civil, structural, and masonry works", poc: 99.71, image: "images/deck/gold-residences.jpg", blurb: "Phase 2 residential towers along Ninoy Aquino Avenue." },
-  { id: "gold-tower-e", name: "Gold Phase 2 – Tower E", status: "ongoing", category: "High-Rise", place: "Ninoy Aquino Avenue, Parañaque City", developer: "SM Development Corporation", amount: "₱448,000,000.00", scope: "Tower E. Tower D architectural works were awarded in September 2025.", poc: 77.66, image: "images/projects/gold-tower-e.jpg", blurb: "Tower E of Gold Residences Phase 2." },
+  { id: "gold-tower-e", name: "Gold Phase 2 – Tower E", status: "ongoing", category: "High-Rise", place: "Ninoy Aquino Avenue, Parañaque City", developer: "SM Development Corporation", amount: "₱448,000,000.00", scope: "Tower E. Tower D architectural works were awarded in September 2025.", poc: 77.66, target: "April 17, 2028", image: "images/projects/gold-tower-e.jpg", blurb: "Tower E of Gold Residences Phase 2." },
   { id: "bloom", name: "Bloom Residences", status: "ongoing", category: "High-Rise", place: "Dr. A. Santos Avenue, Brgy. San Antonio, Sucat, Parañaque", developer: "SM Development Corporation", amount: "₱860,000,000.00", scope: "Take-over works", poc: 41.91, takeover: true, image: "images/projects/bloom-hi.jpg", blurb: "Take-over of Bloom Residences in Sucat." },
   { id: "charm", name: "Charm Residences", status: "ongoing", category: "High-Rise", place: "Felix Avenue, Cainta, Rizal", developer: "SM Development Corporation", amount: "₱543,949,990.00", scope: "Take-over works", poc: 94.51, takeover: true, image: "images/projects/charm.jpg", blurb: "Take-over of Charm Residences in Cainta." },
-  { id: "central-park", name: "9 Central Park", status: "ongoing", category: "High-Rise", place: "Northwin Global City, Brgy. Patubig, Marilao, Bulacan", developer: "Megaworld – NGC", amount: "₱950,000,000.00", poc: 79.8, image: "images/projects/central-park-hi.jpg", blurb: "Residential development inside Northwin Global City." },
+  { id: "central-park", name: "9 Central Park", status: "ongoing", category: "High-Rise", place: "Northwin Global City, Brgy. Patubig, Marilao, Bulacan", developer: "Megaworld – NGC", amount: "₱950,000,000.00", poc: 79.8, target: "February 28, 2027", image: "images/projects/central-park-hi.jpg", blurb: "Residential development inside Northwin Global City." },
   { id: "westwind", name: "Westwind Residences", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱950,000,000.00", scope: "4-storey condominium", poc: 99.81, image: "images/deck/westwind-hi.jpg", blurb: "Four-storey condominium cluster at Lancaster New City." },
-  { id: "westwind-2", name: "Westwind Residences – Building 2, Cluster A", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱171,266,614.36", scope: "4-storey condominium", poc: 15.7, image: "images/projects/westwind-2.jpg", blurb: "Second building in Cluster A of Westwind Residences." },
+  { id: "westwind-2", name: "Westwind Residences – Building 2, Cluster A", status: "ongoing", category: "High-Rise", place: "Lancaster New City, Advincula Avenue, General Trias, Cavite", developer: "Property Company of Friends, Inc.", amount: "₱171,266,614.36", scope: "4-storey condominium", poc: 15.7, target: "May 30, 2027", image: "images/projects/westwind-2.jpg", blurb: "Second building in Cluster A of Westwind Residences." },
   { id: "stpeter-muntinlupa", name: "St. Peter – Muntinlupa", status: "ongoing", category: "Institutional", place: "Brgy. Bayanan, Muntinlupa", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱390,000,000.00", scope: "4-storey chapel with 2-level basement parking", poc: 77.8, image: "images/deck/stpeter-muntinlupa.jpeg", blurb: "Chapel building with basement parking in Muntinlupa." },
-  { id: "stpeter-caloocan", name: "St. Peter – Caloocan", status: "ongoing", category: "Institutional", place: "Barangay 22, Caloocan City", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱917,000,000.00", scope: "9-storey memorial chapels with embalming facilities", poc: null, pocLabel: "Newly awarded", image: "images/deck/stpeter-caloocan-hi.jpg", blurb: "Newly awarded memorial chapel complex in Caloocan." },
-  { id: "sunnyhomes", name: "Sunnyhomes Subdivision", status: "ongoing", category: "Housing", place: "Brgy. Banay-Banay, Padre Garcia, Batangas", developer: "Summerhills Home Development Corp.", amount: "₱117,129,600.00", scope: "Low-cost housing", poc: 67.22, image: "images/projects/sunnyhomes.jpg", blurb: "Low-cost housing in Padre Garcia, Batangas." },
-  { id: "pasig-hall", name: "The Modern Pasig City Hall", status: "ongoing", category: "Institutional", place: "Caruncho Avenue, Brgy. San Nicolas, Pasig City", developer: "PCHCC", amount: "₱930,000,000.00", scope: "Concreting and rebars", poc: 44.53, image: "images/deck/pasig-cityhall.jpeg", blurb: "Structural concrete and rebar works for the new city hall." },
-  { id: "iland", name: "Iland Tower 3 Residences", status: "ongoing", category: "High-Rise", place: "8362 Arcadio Santos Avenue, Parañaque City", developer: "ISOC Holdings", amount: "₱200,000,000.00", poc: 18.33, image: "images/projects/iland.jpg", blurb: "Tower 3 residences on Arcadio Santos Avenue." },
-  { id: "garden-city", name: "Garden City", status: "ongoing", category: "High-Rise", place: "Las Piñas–Talaba Diversion Road, Brgy. Zapote 3, Bacoor City, Cavite", developer: "Golden Bay Prime Landholdings", amount: "₱1,095,657,032.35", poc: 5.22, image: "images/deck/garden-city-hi.jpg", blurb: "Residential development in Bacoor, just getting underway." },
+  { id: "stpeter-caloocan", name: "St. Peter – Caloocan", status: "ongoing", category: "Institutional", place: "Barangay 22, Caloocan City", developer: "New Frontier Memorial Chapel Development Corp.", amount: "₱917,000,000.00", scope: "9-storey memorial chapels with embalming facilities", poc: null, pocLabel: "Newly awarded", target: "July 23, 2028", image: "images/deck/stpeter-caloocan-hi.jpg", blurb: "Newly awarded memorial chapel complex in Caloocan." },
+  { id: "sunnyhomes", name: "Sunnyhomes Subdivision", status: "ongoing", category: "Housing", place: "Brgy. Banay-Banay, Padre Garcia, Batangas", developer: "Summerhills Home Development Corp.", amount: "₱117,129,600.00", scope: "Low-cost housing", poc: 67.22, target: "August 23, 2026 (original) · EOT evaluation December 14, 2026", image: "images/projects/sunnyhomes.jpg", blurb: "Low-cost housing in Padre Garcia, Batangas." },
+  { id: "pasig-hall", name: "The Modern Pasig City Hall", status: "ongoing", category: "Institutional", place: "Caruncho Avenue, Brgy. San Nicolas, Pasig City", developer: "PCHCC", amount: "₱930,000,000.00", scope: "Concreting and rebars", poc: 44.53, target: "January 23, 2027 (original) · Ongoing EOT evaluation", image: "images/deck/pasig-cityhall.jpeg", blurb: "Structural concrete and rebar works for the new city hall." },
+  { id: "iland", name: "I-Land Residences Tower 3", status: "ongoing", category: "High-Rise", place: "8362 Arcadio Santos Avenue, Parañaque City", developer: "ISOC Holdings", amount: "₱200,000,000.00", poc: 18.33, target: "September 20, 2027", image: "images/projects/iland.jpg", blurb: "Tower 3 residences on Arcadio Santos Avenue." },
+  { id: "garden-city", name: "Garden City", status: "ongoing", category: "High-Rise", place: "Las Piñas–Talaba Diversion Road, Brgy. Zapote 3, Bacoor City, Cavite", developer: "Golden Bay Prime Landholdings", amount: "₱1,095,657,032.35", poc: 5.22, target: "Internal March 13, 2029 · External August 8, 2029", image: "images/deck/garden-city-hi.jpg", blurb: "Residential development in Bacoor, just getting underway." },
 
   { id: "studio-a", name: "Studio A Residences", status: "completed", category: "High-Rise", place: "Xavier Ville Ave. cor. Esteban Abada, Loyola Heights, Quezon City", developer: "Filinvest Land Incorporated", amount: "₱328,500,000.00", scope: "34 storeys", image: "images/projects/studio-a.jpg", blurb: "Completed residential tower in Loyola Heights." },
   { id: "century-peak", name: "Century Peak Tower", status: "completed", category: "High-Rise", place: "Malate, Manila", developer: "Century Peak Hotel Management", amount: "₱145,000,000.00", scope: "45 storeys", image: "images/projects/century-peak.jpg", blurb: "Completed tower in Malate." },
@@ -63,25 +63,18 @@ const PROJECTS = [
 
 const LEADERS = [
   { name: "Engr. John Paul Pe", role: "President & CEO", ceo: true, summary: "Leads the company and oversees all divisions. QAQC and Motorpool report directly to the President.", photo: "images/team/john-paul.png", group: "Direct departments", departments: [{ name: "QAQC", place: "Head Office" }, { name: "Motorpool", place: "Head Office" }] },
-  { name: "Engr. Paulo Lorenzo Pe", role: "Chief Operations Officer / Board of Directors", summary: "Heads operations and the core head-office functions that support every project.", photo: "images/team/paulo.png", group: "Head-office departments", departments: [{ name: "Estimating", place: "Head Office" }, { name: "Procurement", place: "Head Office" }, { name: "Facilities & Admin", place: "Head Office" }, { name: "CAMD", place: "Head Office" }, { name: "Legal", place: "Head Office" }, { name: "IT", place: "Head Office" }, { name: "Human Capital", place: "Head Office" }] },
+  { name: "Engr. Paulo Lorenzo Pe", role: "Chief Operations Officer / Board of Directors", summary: "Heads operations and the core head-office functions that support every project.", photo: "images/team/paulo.png", group: "Head-office departments", departments: [{ name: "Estimating", place: "Head Office" }, { name: "Procurement", place: "Head Office" }, { name: "Cost Control", place: "Head Office" }, { name: "Facilities & Admin", place: "Head Office" }, { name: "CAMD", place: "Head Office" }, { name: "Legal", place: "Head Office" }, { name: "IT", place: "Head Office" }, { name: "Human Capital", place: "Head Office" }] },
   { name: "Mr. Noel Gayos", role: "Overall Project Consultant", summary: "Advises on project delivery and oversees safety, site employees and site workers.", photo: "images/team/noel.png", group: "Project teams", departments: [{ name: "Project Site Employees", place: "Technical / Non-technical" }, { name: "Safety & Health", place: "Project site" }, { name: "Project Site Workers", place: "Project site" }] },
   { name: "Arch. Belinda Pe-Correa", role: "SCMD Head / Corporate Secretary / Board of Directors", summary: "Heads SCMD and serves as Corporate Secretary, with the sub-contractors department reporting through her.", photo: "images/team/belinda.png", group: "Departments", departments: [{ name: "Sub-contractors", place: "Head Office" }] },
   { name: "Ms. Angelina Pe-Dizon", role: "Corporate Treasurer / Board of Directors", summary: "Serves as Corporate Treasurer and oversees finance, audit, administration and inventory.", photo: "images/team/angelina.png", group: "Head-office departments", departments: [{ name: "Accounting", place: "Head Office" }, { name: "Audit", place: "Head Office" }, { name: "Administration", place: "Head Office" }, { name: "Inventory & Warehouse", place: "Head Office" }] },
   { name: "Ms. Cynthia Pe", role: "Board of Directors", summary: "Member of the Board of Directors.", photo: "images/team/cynthia.png", group: "Departments", departments: [] }
 ];
 
-const VIDEOS = [
-  { id: "lRWIdAVJXkc", title: "Gala — A Night to Remember" },
-  { id: "FbkxUe66Liw", title: "Workforce Appreciation Month, May 2025" },
-  { id: "OfLrph5KtCo", title: "Christmas Party 2023 highlights" }
-];
-
 const ICONS = {
-  people: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  family: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
   record: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16l3.5-4 3 2.5L20 8"/></svg>',
   plant: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M4 10h16M12 7v13"/></svg>',
-  takeover: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>',
-  aaa: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.2-7 8.5C7.8 19.2 5 16.2 5 12V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>'
+  partners: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"/><path d="M12 8v8"/><circle cx="12" cy="12" r="9"/><path d="M7.5 7.5 9 9M16.5 7.5 15 9M7.5 16.5 9 15M16.5 16.5 15 15"/></svg>'
 };
 
 const PIN = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>';
@@ -90,44 +83,35 @@ const CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true
 
 const WHY = [
   {
-    title: "People first",
-    body: "ABC invests in the knowledge, skills, attributes, and experience its people need to build the project in front of them.",
-    stat: "People",
-    caption: "knowledge, skills, and experience on the job",
-    icon: "people"
+    title: "Family-owned company",
+    body: "ABC is a family-owned company. That family legacy shows in how the business is run and in the commitment to delivering every project — with a stronger sense of accountability to clients.",
+    stat: "Family",
+    caption: "owned and accountable to every client",
+    icon: "family"
   },
   {
-    title: "A 60-year track record",
-    body: "The record is the proof. Completed work is worth Php 25 billion, from industrial buildings to high-rise condominiums.",
-    stat: "Php 25B",
-    caption: "in completed work over 60 years",
-    count: 25,
-    prefix: "Php ",
-    suffix: "B",
+    title: "60 years of experience",
+    body: "ABC has roughly 60 years in the industry and a completed-project record that proves it can handle the work — from industrial plants to high-rise condominiums.",
+    stat: "60+",
+    caption: "years of building across the archipelago",
+    count: 60,
+    suffix: "+",
     icon: "record"
   },
   {
-    title: "Own precast plants",
-    body: "Archiwall produces interior wall panels and Archicast produces exterior precast. Both cut build time and cost with ready-to-finish concrete wall systems.",
+    title: "Manufacturing capabilities",
+    body: "ABC runs two major production plants with significant capacity — about 3,000 square meters per day — and aims to deliver products within 24 hours, depending on project needs and availability.",
     stat: "2",
-    caption: "in-house precast plants: Archiwall and Archicast",
+    caption: "major plants · ~3,000 sq.m. per day",
     count: 2,
     icon: "plant"
   },
   {
-    title: "Takeover specialist",
-    body: "ABC can take over unfinished projects and bring them to completion. Five current jobs are takeovers, a sign that clients trust the company to finish.",
-    stat: "5",
-    caption: "current jobs are takeovers",
-    count: 5,
-    icon: "takeover"
-  },
-  {
-    title: "AAA, end to end",
-    body: "A Category AAA contractor equipped to provide construction solutions, with its own equipment fleet, aluminum formworks, and subsidiary plants.",
-    stat: "AAA",
-    caption: "end to end, with fleet, formworks, and plants",
-    icon: "aaa"
+    title: "Partner manufacturers",
+    body: "ABC also works with partner manufacturers. Those partnerships help cover additional production requirements and manufacturing capacity when projects demand more.",
+    stat: "Partners",
+    caption: "extra capacity when the schedule needs it",
+    icon: "partners"
   }
 ];
 
@@ -448,7 +432,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       if (state.status !== "all" && project.status !== state.status) return false;
       if (state.category !== "All" && project.category !== state.category) return false;
       if (!state.query) return true;
-      const hay = [project.name, project.place, project.developer, project.category, project.scope, project.blurb].join(" ").toLowerCase();
+      const hay = [project.name, project.place, project.category, project.scope, project.blurb].join(" ").toLowerCase();
       return hay.includes(state.query);
     });
     if (state.sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
@@ -474,7 +458,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
           </div>
           <div class="card-body">
             <h3>${project.name}</h3>
-            <p>${project.place || project.developer || ""}</p>
+            <p>${project.place || ""}</p>
             ${progress}
           </div>
         </button>
@@ -664,7 +648,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     <button type="button" data-id="${project.id}">
       <strong>${project.name}</strong>
       <div class="meter" style="--w:${project.poc}%"><span></span></div>
-      <small>${project.poc}% · ${project.developer || ""}</small>
+      <small>${project.poc}% complete</small>
     </button>`).join("");
   dash.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => openProject(button.dataset.id));
@@ -680,12 +664,14 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     hero.innerHTML = `
       ${project.image ? `<img src="${project.image}" alt="" decoding="async" />` : ""}
       <button class="modal-close" type="button" data-close>Close</button>`;
+    const targetCompletion = project.target
+      || (project.status === "completed" ? "Completed" : "");
     const rows = [
-      ["Status", project.status === "ongoing" ? (project.pocLabel || `${project.poc}% complete`) : "Completed"],
+      ["Target completion", targetCompletion],
       ["Category", project.category],
       ["Location", project.place],
-      ["Developer", project.developer],
-      ["Contract", project.amount],
+      ["Developer", ""],
+      ["Contract size", project.amount ? "+ or - ₱1B" : ""],
       ["Scope", project.scope]
     ].filter((row) => row[1]);
     body.innerHTML = `
@@ -879,34 +865,6 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
     if (scale === 1) { panX = 0; panY = 0; }
     applyTransform();
   }, { passive: false });
-
-  const copyText = async (value) => {
-    try {
-      await navigator.clipboard.writeText(value);
-      return true;
-    } catch {
-      const area = document.createElement("textarea");
-      area.value = value;
-      area.setAttribute("readonly", "");
-      area.style.position = "fixed";
-      area.style.left = "-9999px";
-      document.body.appendChild(area);
-      area.select();
-      let ok = false;
-      try { ok = document.execCommand("copy"); } catch { ok = false; }
-      area.remove();
-      return ok;
-    }
-  };
-  document.querySelectorAll(".copy-btn").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const original = button.dataset.label || button.textContent;
-      button.dataset.label = original;
-      const ok = await copyText(button.dataset.copy);
-      button.textContent = ok ? "Copied" : "Copy failed";
-      window.setTimeout(() => { button.textContent = original; }, 1800);
-    });
-  });
 
   const form = document.querySelector("#contact-form");
   form?.addEventListener("submit", (event) => {

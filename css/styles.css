@@ -1729,23 +1729,32 @@ ul {
   align-items: center;
 }
 
-.org-stem { width: 2px; height: 28px; background: #b9c3dc; }
+.org-stem {
+  width: 2px;
+  height: 28px;
+  background: #b9c3dc;
+  flex: 0 0 auto;
+}
 
 .org-row {
+  --org-gap: 0.75rem;
+  --org-cols: 5;
+  --org-line: 52px;
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding-top: 52px;
+  grid-template-columns: repeat(var(--org-cols), minmax(0, 1fr));
+  gap: var(--org-gap);
+  padding-top: var(--org-line);
 }
 
+/* Continuous bar from first report (Paulo) through last (Cynthia), meeting the CEO stem */
 .org-row::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 10%;
-  right: 10%;
+  left: calc((100% - (var(--org-cols) - 1) * var(--org-gap)) / (var(--org-cols) * 2));
+  right: calc((100% - (var(--org-cols) - 1) * var(--org-gap)) / (var(--org-cols) * 2));
   height: 2px;
   background: #b9c3dc;
 }
@@ -1768,10 +1777,10 @@ ul {
 .org-row .org-card::before {
   content: "";
   position: absolute;
-  top: -52px;
+  top: calc(var(--org-line) * -1);
   left: calc(50% - 1px);
   width: 2px;
-  height: 28px;
+  height: var(--org-line);
   background: #b9c3dc;
   z-index: 0;
 }
@@ -2083,7 +2092,7 @@ ul {
 }
 
 .footer-grid {
-  grid-template-columns: 1.4fr 1.2fr 0.8fr 0.8fr;
+  grid-template-columns: 1.4fr 1.2fr 1fr;
   gap: 2.5rem;
   padding-bottom: 2.5rem;
 }
