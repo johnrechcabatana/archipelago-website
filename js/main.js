@@ -671,7 +671,7 @@ const CATEGORIES = ["All", ...new Set(PROJECTS.filter((project) => project.image
       ["Category", project.category],
       ["Location", project.place],
       ["Developer", ""],
-      ["Contract size", project.amount ? "+ or - ₱1B" : ""],
+      ["Contract size", project.amount ? (amountValue(project) > 1_000_000_000 ? "+ ₱B" : "- ₱B") : ""],
       ["Scope", project.scope]
     ].filter((row) => row[1]);
     body.innerHTML = `
