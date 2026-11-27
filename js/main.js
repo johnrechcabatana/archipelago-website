@@ -165,7 +165,7 @@ const PARTNERS = [
   },
   {
     name: "University of Santo Tomas",
-    badge: "Sponsorship University partner",
+    badge: "University Partner In Civil Engineering",
     place: "España Blvd., Sampaloc, Manila",
     email: "inquiries@ust.edu.ph",
     description: "Archipelago Builders and Archicast sponsor the UST men's and women's basketball teams. The company is led by UST civil engineering alumnus Engr. John Paul Pe.",
