@@ -149,7 +149,7 @@ const PARTNERS = [
   },
   {
     name: "National University",
-    badge: "University partner",
+    badge: "Sponsorship University partner",
     place: "551 F. Jhocson St., Sampaloc, Manila",
     email: "info@national-u.edu.ph",
     description: "Home of the NU Bulldogs. The men's volleyball team won the UAAP Season 86 championship and carries the banner of three-peat defending UAAP champions.",
@@ -165,7 +165,7 @@ const PARTNERS = [
   },
   {
     name: "University of Santo Tomas",
-    badge: "University partner",
+    badge: "Sponsorship University partner",
     place: "España Blvd., Sampaloc, Manila",
     email: "inquiries@ust.edu.ph",
     description: "Archipelago Builders and Archicast sponsor the UST men's and women's basketball teams. The company is led by UST civil engineering alumnus Engr. John Paul Pe.",
